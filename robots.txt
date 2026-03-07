@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.revyourbusiness.co.za/sitemap.xml
+
+# Block admin page from indexing
+Disallow: /rev_admin
+Disallow: /REV_Admin.html
