@@ -1,61 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — Business & AI Consulting SA | REV Consulting</title>
-  <meta name="description" content="Business and AI consulting services in South Africa — Revenue Growth, Operational Efficiency, Vision & Leadership, and AI-Augmented Strategy. Use our free REV AI Pulse health check or Find Your REV matcher to get started.">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://www.revyourbusiness.co.za/services.html">
-  <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/services.html">
-  <link rel="alternate" hreflang="en"    href="https://www.revyourbusiness.co.za/services.html">
-  <meta property="og:title"        content="Services — REV Improvement Consulting">
-  <meta property="og:description"  content="Four consulting capability streams for South African businesses. Not sure where to start? Try our free REV AI Pulse business health check or the Find Your REV engagement matcher.">
-  <meta property="og:url"          content="https://www.revyourbusiness.co.za/services.html">
-  <meta property="og:type"         content="website">
-  <meta property="og:image"        content="https://www.revyourbusiness.co.za/og-image.webp">
-  <meta property="og:image:width"  content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Services — REV Improvement Consulting">
-  <meta name="twitter:description" content="Four capability streams designed to move the needle on your most pressing business challenges.">
-  <meta name="twitter:image"       content="https://www.revyourbusiness.co.za/og-image.webp">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.revyourbusiness.co.za/"},
-      {"@type":"ListItem","position":2,"name":"Services","item":"https://www.revyourbusiness.co.za/services.html"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "serviceType":"Business Consulting",
-    "provider":{"@type":"ProfessionalService","name":"REV Improvement Consulting","url":"https://www.revyourbusiness.co.za"},
-    "areaServed":{"@type":"Country","name":"South Africa"},
-    "hasOfferCatalog":{
-      "@type":"OfferCatalog","name":"REV Service Menu",
-      "itemListElement":[
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Revenue & Growth Strategy"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Operational Efficiency Consulting"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vision & Leadership Advisory"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI-Augmented Business Strategy"}}
-      ]
-    }
-  }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CZEZ4GJF8"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1CZEZ4GJF8');</script>
-  <style>
+<style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
       --black:#0a0a0a;--dark:#111;--card:#141414;--border:#1e1e1e;
@@ -94,14 +37,62 @@
     .section-title{font-family:var(--font-display);font-size:clamp(40px,5vw,64px);line-height:.92;letter-spacing:2px;}
     .services-header{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;padding:56px 0 40px;}
     .services-intro{font-size:15px;color:var(--muted);max-width:420px;line-height:1.7;}
-    .services-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:32px;}
-    .tab-btn{font-family:var(--font-ui);font-size:12px;letter-spacing:2px;text-transform:uppercase;background:none;border:1.5px solid var(--border);color:var(--muted);padding:10px 20px;cursor:pointer;border-radius:2px;transition:all .2s;}
+    .services-tabs{
+  display:flex;
+  gap:6px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  margin-bottom:32px;
+  padding-bottom:4px;
+  width:100%;
+  box-sizing:border-box;
+}
+.services-tabs::-webkit-scrollbar{display:none;}
+    .tab-btn{
+  font-family:var(--font-ui);
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  background:none;
+  border:1.5px solid var(--border);
+  color:var(--muted);
+  padding:10px 20px;
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .2s;
+  white-space:nowrap;
+  flex-shrink:0;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+  min-height:44px;
+}
     .tab-btn:hover{border-color:rgba(76,175,101,0.4);color:var(--white);}
     .tab-btn.active{background:var(--green);border-color:var(--green);color:var(--black);font-weight:700;}
     .service-panel{display:none;}
-    .service-panel.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;animation:fadeUp .35s ease both;}
+    .service-panel.active{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));
+  gap:16px;
+  animation:fadeUp .35s ease both;
+  width:100%;
+  box-sizing:border-box;
+  overflow:hidden;
+}
     @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
-    .service-card{background:var(--card);border:1px solid var(--border);border-radius:3px;padding:28px 26px;transition:border-color .2s,transform .2s;position:relative;overflow:hidden;}
+    .service-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:3px;
+  padding:28px 26px;
+  transition:border-color .2s,transform .2s;
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  box-sizing:border-box;
+}
     .service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(76,175,101,0.05),transparent);opacity:0;transition:opacity .2s;}
     .service-card:hover{border-color:rgba(76,175,101,0.35);transform:translateY(-2px);}
     .service-card:hover::before{opacity:1;}
@@ -165,14 +156,6 @@
     transition: background 0.2s;
   }
   .nav-cta:hover { background: var(--green-light); }
-  .hamburger {
-    display: none; flex-direction: column; gap: 6px;
-    background: none; border: none; cursor: pointer; padding: 4px;
-  }
-  .hamburger span { display: block; width: 100%; height: 2px; background: var(--white); transition: all 0.3s; }
-  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   /* ── FOOTER ── */
   .footer-social { display:flex; gap:16px; margin-top:12px; }
@@ -197,13 +180,6 @@
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
     .nav-cta { display: none; }
-    .hamburger { display: flex; }
-    .nav-links.open {
-      display: flex; position: fixed; top: 57px; left: 0; right: 0;
-      flex-direction: column; padding: 16px 20px 28px; gap: 0;
-      background: rgba(10,10,10,0.98); backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(76,175,101,0.2); z-index: 99; list-style: none;
-    }
     .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-links li:last-child { border-bottom: none; }
     .nav-links a { display: block; padding: 16px 4px; font-size: 15px; letter-spacing: 3px; }
@@ -216,6 +192,113 @@
     footer { padding: 32px 16px; }
     nav { padding: 12px 16px; }
     .nav-logo-text { font-size: 15px; letter-spacing: 2px; }
+  }
+
+  @media (max-width: 768px) {
+    body { overflow-x: hidden; }
+    #page-hero { padding: 100px 20px 48px !important; }
+    .services-tabs { padding: 0 16px 0 16px !important; }
+    .tab-btn { font-size: 10px !important; padding: 10px 14px !important; }
+    .service-panel { padding: 40px 20px !important; }
+    .service-panel h2 { font-size: clamp(28px, 8vw, 44px) !important; }
+    .deliverable-list { padding: 0 !important; }
+    .deliverable-item { padding: 14px 16px 14px 20px !important; }
+    .svc-cta-strip { padding: 40px 20px !important; flex-direction: column; gap: 16px; text-align: center; }
+    [style*="padding:80px"], [style*="padding: 80px"] { padding: 40px 20px !important; }
+    [style*="max-width:1100px"], [style*="max-width: 1100px"] { max-width: 100% !important; padding-left: 20px !important; padding-right: 20px !important; }
+    [style*="width:620px"], [style*="width: 620px"] { width: 100% !important; }
+  }
+  @media (max-width: 480px) {
+    .tab-btn { font-size: 9px !important; padding: 9px 12px !important; }
+    .service-panel { padding: 32px 16px !important; }
+  }
+
+  /* ── HAMBURGER TOUCH FIX ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    min-height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 14px 12px !important;
+    position: relative;
+    z-index: 300 !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* ── NAV MENU OPEN STATE ── */
+  .nav-links.menu-open {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,10,0.97);
+    z-index: 250;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 80px 40px;
+  }
+  .nav-links.menu-open li a {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex !important; }
+  }
+
+  /* ── SERVICES TABS & CARDS — MOBILE ── */
+  @media (max-width: 768px) {
+    .services-tabs {
+      padding: 0 16px 8px !important;
+      margin-bottom: 24px !important;
+    }
+    .service-panel.active {
+      grid-template-columns: 1fr !important;
+      padding: 0 !important;
+    }
+    .service-card {
+      padding: 20px 16px !important;
+    }
+    .service-card-number {
+      font-size: 36px !important;
+    }
+    /* Main services wrapper */
+    .services-main, #services-content, main > section {
+      padding: 24px 16px !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .tab-btn {
+      font-size: 9px !important;
+      padding: 9px 12px !important;
+    }
+    .service-card {
+      padding: 16px 14px !important;
+    }
   }
 </style>
 
@@ -269,6 +352,31 @@
   }
   @media (max-width: 380px) { footer { padding: 32px 16px; } nav { padding: 12px 16px; } .nav-logo-text { font-size: 15px; letter-spacing: 2px; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": "https://www.revyourbusiness.co.za/#business",
+      "name": "REV Improvement Consulting",
+      "url": "https://www.revyourbusiness.co.za/",
+      "telephone": "+27716858624",
+      "email": "hello@revyourbusiness.co.za",
+      "priceRange": "$$$",
+      "image": "https://www.revyourbusiness.co.za/og-image.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandton City Office Towers",
+        "addressLocality": "Sandton",
+        "addressRegion": "Gauteng",
+        "postalCode": "2196",
+        "addressCountry": "ZA"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div style="height:80px"></div>
@@ -283,13 +391,13 @@
   </ul>
   <div style="display:flex;align-items:center;gap:16px;">
     <a href="/#contact" class="nav-cta">Secure a Consultation</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="page-hero">
   <p class="page-eyebrow">What We Do</p>
-  <h1>THE <span class="accent">REV</span><br>SERVICE MENU.</h1>
+  <h1>Strategic AI Integration &amp;<br><span class="accent">Management Consulting Services</span></h1>
   <p class="page-hero-desc">Four distinct capability streams, each designed to move the needle on your most pressing business challenges. Select the area where you need the highest-impact intervention.</p>
 
 </div>
@@ -407,6 +515,60 @@ document.addEventListener('DOMContentLoaded', function() {
   var tabs = document.querySelectorAll('.svc-tab');
   if (tabs.length) tabs[0].classList.add('active');
 });
+</script>
+<script>
+(function() {
+  var _menuOpen = false;
+  var _lastEvent = 0;
+
+  function toggleMenu(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // Debounce: prevent double-fire from pointer + click
+      var now = Date.now();
+      if (now - _lastEvent < 300) return;
+      _lastEvent = now;
+    }
+    _menuOpen = !_menuOpen;
+    var btn  = document.getElementById('hamburger');
+    var menu = document.getElementById('nav-menu');
+    if (btn)  btn.classList.toggle('open', _menuOpen);
+    if (menu) menu.classList.toggle('menu-open', _menuOpen);
+    document.body.style.overflow = _menuOpen ? 'hidden' : '';
+  }
+
+  // Expose globally for any inline onclick fallbacks
+  window.toggleMenu = toggleMenu;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('hamburger');
+    if (!btn) return;
+
+    // Remove inline onclick to avoid double-firing
+    btn.removeAttribute('onclick');
+
+    // Register both pointerdown and click — debouncer prevents double-fire
+    btn.addEventListener('pointerdown', toggleMenu, { passive: false });
+    btn.addEventListener('click', toggleMenu, { passive: false });
+
+    // Close menu when a nav link is clicked
+    var navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (_menuOpen) toggleMenu();
+      });
+    });
+
+    // Close on outside tap
+    document.addEventListener('pointerdown', function(e) {
+      if (_menuOpen && !btn.contains(e.target) &&
+          !document.getElementById('nav-menu').contains(e.target)) {
+        toggleMenu();
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>

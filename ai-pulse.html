@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>REV AI Pulse — Free AI Business Health Report | REV Consulting</title>
-  <meta name="description" content="Free AI business health check tool for South African businesses. Score your company across Revenue, Operations, Leadership and AI Readiness in under 5 minutes. Get a personalised consulting recommendation instantly.">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://www.revyourbusiness.co.za/ai-pulse.html">
-  <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/ai-pulse.html">
-  <link rel="alternate" hreflang="en"    href="https://www.revyourbusiness.co.za/ai-pulse.html">
-  <meta property="og:title"        content="REV AI Pulse — Free AI Business Intelligence Report">
-  <meta property="og:description"  content="Free AI-powered business health check for South African businesses. Score across 4 dimensions and get a personalised consulting recommendation in under 5 minutes. No sign-up required.">
-  <meta property="og:url"          content="https://www.revyourbusiness.co.za/ai-pulse.html">
-  <meta property="og:type"         content="website">
-  <meta property="og:image"        content="https://www.revyourbusiness.co.za/og-image.webp">
-  <meta property="og:image:width"  content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="REV AI Pulse — Free AI Business Intelligence Report">
-  <meta name="twitter:description" content="AI-generated business health report in under 5 minutes. Scored across Revenue, Operations, Leadership and AI Readiness.">
-  <meta name="twitter:image"       content="https://www.revyourbusiness.co.za/og-image.webp">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.revyourbusiness.co.za/"},
-      {"@type":"ListItem","position":2,"name":"REV AI Pulse","item":"https://www.revyourbusiness.co.za/ai-pulse.html"}
-    ]
-  },
-    {
-      "@type": "SoftwareApplication",
-      "name": "REV AI Pulse",
-      "url": "https://www.revyourbusiness.co.za/ai-pulse.html",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "ZAR"},
-      "description": "Free AI-powered business health check. Score your business across Revenue, Operations, Leadership and AI Readiness in under 5 minutes. Get a personalised consulting recommendation instantly.",
-      "keywords": "free business health check, AI business assessment, business diagnostic tool, South Africa",
-      "provider": {"@type": "Organization", "name": "REV Improvement Consulting", "url": "https://www.revyourbusiness.co.za"}
-    }
-  ]
-}
-</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CZEZ4GJF8"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1CZEZ4GJF8');
-
-document.addEventListener('DOMContentLoaded', function() {
-  goStage(1);
-  init();
-});
-</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <style>
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -763,14 +703,6 @@ document.addEventListener('DOMContentLoaded', function() {
     transition: background 0.2s;
   }
   .nav-cta:hover { background: var(--green-light); }
-  .hamburger {
-    display: none; flex-direction: column; gap: 6px;
-    background: none; border: none; cursor: pointer; padding: 4px;
-  }
-  .hamburger span { display: block; width: 100%; height: 2px; background: var(--white); transition: all 0.3s; }
-  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   /* ── FOOTER ── */
   .footer-social { display:flex; gap:16px; margin-top:12px; }
@@ -795,13 +727,6 @@ document.addEventListener('DOMContentLoaded', function() {
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
     .nav-cta { display: none; }
-    .hamburger { display: flex; }
-    .nav-links.open {
-      display: flex; position: fixed; top: 57px; left: 0; right: 0;
-      flex-direction: column; padding: 16px 20px 28px; gap: 0;
-      background: rgba(10,10,10,0.98); backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(76,175,101,0.2); z-index: 99; list-style: none;
-    }
     .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-links li:last-child { border-bottom: none; }
     .nav-links a { display: block; padding: 16px 4px; font-size: 15px; letter-spacing: 3px; }
@@ -821,7 +746,80 @@ document.addEventListener('DOMContentLoaded', function() {
   .priority-item { touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
   .priority-item:active { cursor: grabbing; }
 
-  </style>
+  
+  @media (max-width: 768px) {
+    body { overflow-x: hidden; }
+    .stage-hero { padding: 100px 20px 32px !important; }
+    .stage-body { padding: 24px 20px 40px !important; max-width: 100% !important; width: 100% !important; box-sizing: border-box; }
+    .question-block { padding: 16px !important; margin-bottom: 12px !important; }
+    .scale-row { gap: 6px !important; }
+    .scale-btn { width: 44px !important; height: 44px !important; font-size: 14px !important; }
+    .priority-item { padding: 14px 12px !important; }
+    .report-section { padding: 24px 16px !important; }
+    .report-grid { grid-template-columns: 1fr 1fr !important; }
+    .email-card { padding: 24px 16px !important; }
+    [style*="max-width:760px"], [style*="max-width: 760px"] { max-width: 100% !important; }
+    [style*="padding:80px"], [style*="padding: 80px"] { padding: 40px 20px !important; }
+  }
+  @media (max-width: 480px) {
+    .report-grid { grid-template-columns: 1fr !important; }
+    .scale-btn { width: 40px !important; height: 40px !important; }
+    .stage-body { padding: 20px 16px 32px !important; }
+  }
+
+  /* ── HAMBURGER TOUCH FIX ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    min-height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 14px 12px !important;
+    position: relative;
+    z-index: 300 !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* ── NAV MENU OPEN STATE ── */
+  .nav-links.menu-open {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,10,0.97);
+    z-index: 250;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 80px 40px;
+  }
+  .nav-links.menu-open li a {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex !important; }
+  }
+</style>
 
 <style id="nav-footer-css">
   nav {
@@ -876,19 +874,26 @@ document.addEventListener('DOMContentLoaded', function() {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "REV Improvement Consulting",
-  "url": "https://www.revyourbusiness.co.za",
-  "description": "AI strategy and business growth consulting for South African businesses. Free tools: REV AI Pulse business health check and Find Your REV engagement matcher.",
-  "areaServed": {"@type": "Country", "name": "South Africa"},
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Free Business Tools",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "REV AI Pulse — Free Business Health Check", "url": "https://www.revyourbusiness.co.za/ai-pulse.html"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Find Your REV — Free Engagement Matcher", "url": "https://www.revyourbusiness.co.za/find-your-rev.html"}}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": "https://www.revyourbusiness.co.za/#business",
+      "name": "REV Improvement Consulting",
+      "url": "https://www.revyourbusiness.co.za/",
+      "telephone": "+27716858624",
+      "email": "hello@revyourbusiness.co.za",
+      "priceRange": "$$$",
+      "image": "https://www.revyourbusiness.co.za/og-image.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandton City Office Towers",
+        "addressLocality": "Sandton",
+        "addressRegion": "Gauteng",
+        "postalCode": "2196",
+        "addressCountry": "ZA"
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -904,7 +909,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </ul>
   <div style="display:flex;align-items:center;gap:16px;">
     <a href="/#contact" class="nav-cta">Secure a Consultation</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progress-fill"></div></div>
@@ -915,7 +920,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="stage active" id="stage-1">
   <div class="stage-hero">
     <p class="stage-eyebrow">REV AI Pulse · Stage 1 of 3</p>
-    <h1>YOUR FREE<br><em>AI PULSE</em><br>STARTS HERE.</h1>
+    <h1>Evaluate Your Enterprise AI Readiness<br><em>&amp; Process Efficiency</em></h1>
     <p>Two quick inputs to calibrate your REV AI Pulse against real benchmarks for your revenue tier and sector. Powered by AI — ready in under 5 minutes.</p>
   </div>
   <div class="stage-body">
@@ -950,7 +955,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     <div class="stage-nav">
       <span></span>
-      <button class="btn-forward" id="btn-s1" onclick="goStage(2)" disabled>Begin Health Check →</button>
+      <button class="btn-forward" id="btn-s1" onclick="goStage(2)" disabled data-event-category="Lead Generation" data-event-action="Click" data-event-label="AI Pulse Assessment Start">Begin Health Check →</button>
     </div>
   </div>
 </div>
@@ -961,7 +966,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="stage" id="stage-2">
   <div class="stage-hero">
     <p class="stage-eyebrow">REV AI Pulse · Stage 2 of 3</p>
-    <h1>RATE YOUR<br><em>BUSINESS NOW.</em></h1>
+    <h2>RATE YOUR<br><em>BUSINESS NOW.</em></h2>
     <p>8 questions across 4 dimensions. Be honest — your score is only as useful as your answers are accurate. 1 = Critical gap, 5 = World class.</p>
   </div>
   <div class="stage-body">
@@ -979,7 +984,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="stage" id="stage-3">
   <div class="stage-hero">
     <p class="stage-eyebrow">REV AI Pulse · Stage 3 of 3</p>
-    <h1>WHAT NEEDS<br><em>TO MOVE FIRST?</em></h1>
+    <h2>WHAT NEEDS<br><em>TO MOVE FIRST?</em></h2>
     <p>Drag and drop to rank your business challenges in order of priority. Your top 3 will shape your personalised recommendations.</p>
   </div>
   <div class="stage-body">
@@ -1536,6 +1541,9 @@ function getModelReason(key) {
 }
 
 async function generateReport() {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({'event': 'ai_pulse_completed', 'lead_type': 'AI Readiness Audit'});
+  if (typeof gtag !== 'undefined') { gtag('event', 'ai_pulse_completed', {'lead_type': 'AI Readiness Audit'}); }
   try {
   state.email = document.getElementById('email-input').value.trim();
   calcScores();
@@ -1737,6 +1745,60 @@ document.addEventListener('DOMContentLoaded', function() {
   goStage(1);
   init();
 });
+</script>
+<script>
+(function() {
+  var _menuOpen = false;
+  var _lastEvent = 0;
+
+  function toggleMenu(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // Debounce: prevent double-fire from pointer + click
+      var now = Date.now();
+      if (now - _lastEvent < 300) return;
+      _lastEvent = now;
+    }
+    _menuOpen = !_menuOpen;
+    var btn  = document.getElementById('hamburger');
+    var menu = document.getElementById('nav-menu');
+    if (btn)  btn.classList.toggle('open', _menuOpen);
+    if (menu) menu.classList.toggle('menu-open', _menuOpen);
+    document.body.style.overflow = _menuOpen ? 'hidden' : '';
+  }
+
+  // Expose globally for any inline onclick fallbacks
+  window.toggleMenu = toggleMenu;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('hamburger');
+    if (!btn) return;
+
+    // Remove inline onclick to avoid double-firing
+    btn.removeAttribute('onclick');
+
+    // Register both pointerdown and click — debouncer prevents double-fire
+    btn.addEventListener('pointerdown', toggleMenu, { passive: false });
+    btn.addEventListener('click', toggleMenu, { passive: false });
+
+    // Close menu when a nav link is clicked
+    var navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (_menuOpen) toggleMenu();
+      });
+    });
+
+    // Close on outside tap
+    document.addEventListener('pointerdown', function(e) {
+      if (_menuOpen && !btn.contains(e.target) &&
+          !document.getElementById('nav-menu').contains(e.target)) {
+        toggleMenu();
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>

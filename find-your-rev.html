@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Your REV — AI Engagement Matcher | REV Consulting</title>
-  <meta name="description" content="Free consulting engagement matcher for South African businesses. Answer 3 questions in 60 seconds and get matched to the right REV consulting model — from a Business Diagnostic to a Fractional CSO.">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://www.revyourbusiness.co.za/find-your-rev.html">
-  <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/find-your-rev.html">
-  <link rel="alternate" hreflang="en"    href="https://www.revyourbusiness.co.za/find-your-rev.html">
-  <meta property="og:title"        content="Find Your REV — AI-Powered Engagement Finder">
-  <meta property="og:description"  content="Three questions. Sixty seconds. Get matched to the right REV consulting engagement for your South African business — free, no sign-up required.">
-  <meta property="og:url"          content="https://www.revyourbusiness.co.za/find-your-rev.html">
-  <meta property="og:type"         content="website">
-  <meta property="og:image"        content="https://www.revyourbusiness.co.za/og-image.webp">
-  <meta property="og:image:width"  content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Find Your REV — AI-Powered Engagement Finder">
-  <meta name="twitter:description" content="Answer three questions and get an AI-matched recommendation on which REV consulting engagement model suits your business.">
-  <meta name="twitter:image"       content="https://www.revyourbusiness.co.za/og-image.webp">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.revyourbusiness.co.za/"},
-      {"@type":"ListItem","position":2,"name":"Find Your REV","item":"https://www.revyourbusiness.co.za/find-your-rev.html"}
-    ]
-  },
-    {
-      "@type": "SoftwareApplication",
-      "name": "Find Your REV",
-      "url": "https://www.revyourbusiness.co.za/find-your-rev.html",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "ZAR"},
-      "description": "Free 60-second consulting engagement matcher. Answer 3 questions about your budget, challenge and timeline to get matched to the right REV consulting model.",
-      "keywords": "consulting engagement matcher, find business consultant, South Africa consulting, free tool",
-      "provider": {"@type": "Organization", "name": "REV Improvement Consulting", "url": "https://www.revyourbusiness.co.za"}
-    }
-  ]
-}
-</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CZEZ4GJF8"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1CZEZ4GJF8');</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -500,14 +446,6 @@
     transition: background 0.2s;
   }
   .nav-cta:hover { background: var(--green-light); }
-  .hamburger {
-    display: none; flex-direction: column; gap: 6px;
-    background: none; border: none; cursor: pointer; padding: 4px;
-  }
-  .hamburger span { display: block; width: 100%; height: 2px; background: var(--white); transition: all 0.3s; }
-  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   /* ── FOOTER ── */
   .footer-social { display:flex; gap:16px; margin-top:12px; }
@@ -532,13 +470,6 @@
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
     .nav-cta { display: none; }
-    .hamburger { display: flex; }
-    .nav-links.open {
-      display: flex; position: fixed; top: 57px; left: 0; right: 0;
-      flex-direction: column; padding: 16px 20px 28px; gap: 0;
-      background: rgba(10,10,10,0.98); backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(76,175,101,0.2); z-index: 99; list-style: none;
-    }
     .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-links li:last-child { border-bottom: none; }
     .nav-links a { display: block; padding: 16px 4px; font-size: 15px; letter-spacing: 3px; }
@@ -558,7 +489,77 @@
   .features-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
   .features-list li { font-size: 15px; color: rgba(255,255,255,0.75); padding-left: 20px; position: relative; line-height: 1.5; }
   .features-list li::before { content: '→'; position: absolute; left: 0; color: #4caf65; font-size: 13px; }
-  </style>
+  
+  @media (max-width: 768px) {
+    body { overflow-x: hidden; }
+    .fyr-stage { padding: 40px 20px !important; max-width: 100% !important; }
+    .fyr-hero { padding: 100px 20px 40px !important; }
+    .option-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+    .option-btn { width: 100% !important; box-sizing: border-box; padding: 16px !important; }
+    .result-card { padding: 32px 20px !important; max-width: 100% !important; }
+    .specs-row { grid-template-columns: 1fr 1fr !important; gap: 1px !important; }
+    .deliverables-list li { font-size: 14px !important; }
+    [style*="max-width:900px"], [style*="max-width: 900px"] { max-width: 100% !important; padding-left: 20px !important; padding-right: 20px !important; }
+    [style*="padding:80px"], [style*="padding: 80px"] { padding: 40px 20px !important; }
+  }
+  @media (max-width: 480px) {
+    .specs-row { grid-template-columns: 1fr !important; }
+    .option-btn { padding: 14px !important; font-size: 13px !important; }
+  }
+
+  /* ── HAMBURGER TOUCH FIX ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    min-height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 14px 12px !important;
+    position: relative;
+    z-index: 300 !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* ── NAV MENU OPEN STATE ── */
+  .nav-links.menu-open {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,10,0.97);
+    z-index: 250;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 80px 40px;
+  }
+  .nav-links.menu-open li a {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex !important; }
+  }
+</style>
 
 <style id="nav-footer-css">
   nav {
@@ -613,19 +614,26 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "REV Improvement Consulting",
-  "url": "https://www.revyourbusiness.co.za",
-  "description": "AI strategy and business growth consulting for South African businesses. Free tools: REV AI Pulse business health check and Find Your REV engagement matcher.",
-  "areaServed": {"@type": "Country", "name": "South Africa"},
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Free Business Tools",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "REV AI Pulse — Free Business Health Check", "url": "https://www.revyourbusiness.co.za/ai-pulse.html"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Find Your REV — Free Engagement Matcher", "url": "https://www.revyourbusiness.co.za/find-your-rev.html"}}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": "https://www.revyourbusiness.co.za/#business",
+      "name": "REV Improvement Consulting",
+      "url": "https://www.revyourbusiness.co.za/",
+      "telephone": "+27716858624",
+      "email": "hello@revyourbusiness.co.za",
+      "priceRange": "$$$",
+      "image": "https://www.revyourbusiness.co.za/og-image.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandton City Office Towers",
+        "addressLocality": "Sandton",
+        "addressRegion": "Gauteng",
+        "postalCode": "2196",
+        "addressCountry": "ZA"
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -642,7 +650,7 @@
   </ul>
   <div style="display:flex;align-items:center;gap:16px;">
     <a href="/#contact" class="nav-cta">Secure a Consultation</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -1068,6 +1076,60 @@
       updateSlider();
     }
   });
+</script>
+<script>
+(function() {
+  var _menuOpen = false;
+  var _lastEvent = 0;
+
+  function toggleMenu(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // Debounce: prevent double-fire from pointer + click
+      var now = Date.now();
+      if (now - _lastEvent < 300) return;
+      _lastEvent = now;
+    }
+    _menuOpen = !_menuOpen;
+    var btn  = document.getElementById('hamburger');
+    var menu = document.getElementById('nav-menu');
+    if (btn)  btn.classList.toggle('open', _menuOpen);
+    if (menu) menu.classList.toggle('menu-open', _menuOpen);
+    document.body.style.overflow = _menuOpen ? 'hidden' : '';
+  }
+
+  // Expose globally for any inline onclick fallbacks
+  window.toggleMenu = toggleMenu;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('hamburger');
+    if (!btn) return;
+
+    // Remove inline onclick to avoid double-firing
+    btn.removeAttribute('onclick');
+
+    // Register both pointerdown and click — debouncer prevents double-fire
+    btn.addEventListener('pointerdown', toggleMenu, { passive: false });
+    btn.addEventListener('click', toggleMenu, { passive: false });
+
+    // Close menu when a nav link is clicked
+    var navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (_menuOpen) toggleMenu();
+      });
+    });
+
+    // Close on outside tap
+    document.addEventListener('pointerdown', function(e) {
+      if (_menuOpen && !btn.contains(e.target) &&
+          !document.getElementById('nav-menu').contains(e.target)) {
+        toggleMenu();
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>
