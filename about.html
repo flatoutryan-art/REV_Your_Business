@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About REV Improvement Consulting | AI Strategy &amp; C-Suite Advisory</title>
-  <meta name="description" content="REV Improvement Consulting combines boardroom-tested strategic thinking with a growing network of specialist partners — founded by Ryan van Es, a C-suite executive with 13+ years across South Africa's most demanding industries.">
+  <title>About REV Improvement Consulting | AI &amp; C-Suite Advisory</title>
+  <meta name="description" content="REV Improvement Consulting combines boardroom-tested strategy with a specialist partner network, founded by C-suite executive Ryan van Es.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.revyourbusiness.co.za/about.html">
   <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/about.html">
@@ -13,14 +13,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.revyourbusiness.co.za/about.html">
-  <meta property="og:title" content="About REV Improvement Consulting | AI Strategy &amp; C-Suite Advisory">
+  <meta property="og:title" content="About REV Improvement Consulting | AI &amp; C-Suite Advisory">
   <meta property="og:description" content="Boardroom-tested strategic thinking, applied to the realities of South African business — backed by a growing network of specialist partners.">
   <meta property="og:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
   <meta property="og:site_name" content="REV Improvement Consulting">
   <meta property="og:locale" content="en_ZA">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.revyourbusiness.co.za/about.html">
-  <meta name="twitter:title" content="About REV Improvement Consulting | AI Strategy &amp; C-Suite Advisory">
+  <meta name="twitter:title" content="About REV Improvement Consulting | AI &amp; C-Suite Advisory">
   <meta name="twitter:description" content="Boardroom-tested strategic thinking, applied to the realities of South African business — backed by a growing network of specialist partners.">
   <meta name="twitter:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
 
@@ -91,11 +91,15 @@
     .nav-cta:hover{background:var(--green-light);}
     @media (max-width:1100px){
       .nav-cta{display:none;}
-      .nav-links{position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,0.98);flex-direction:column;gap:0;padding:8px 24px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:all .25s ease;}
-      .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto;}
-      .nav-links li{border-bottom:1px solid rgba(255,255,255,0.06);width:100%;}
-      .nav-links a{display:block;padding:16px 4px;font-size:15px;letter-spacing:3px;}
-      .nav-links li:last-child{border-bottom:none;}
+      .nav-links{display:none;}
+    }
+    .nav-links.open{
+      display:flex !important;flex-direction:column;position:fixed;
+      top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.97);
+      z-index:250;align-items:center;justify-content:center;gap:32px;padding:80px 40px;
+    }
+    .nav-links.open a{font-size:24px;letter-spacing:3px;}
+    @media (max-width:1100px){
       .hamburger{display:flex !important;}
     }
     #page-hero{padding:180px 80px 80px;position:relative;overflow:hidden;}
@@ -132,7 +136,7 @@
     .footer-contact{font-size:14px;color:var(--grey-light);margin-bottom:6px;}
     .footer-contact a{color:inherit;text-decoration:none;}
     .footer-legal{width:100%;text-align:center;font-size:11px;color:rgba(255,255,255,0.15);margin-top:24px;}
-    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;position:relative;z-index:301;}
     .hamburger span{width:22px;height:2px;background:var(--white);}
     @media (max-width:700px){
       #page-hero{padding:140px 24px 56px;}
