@@ -1593,6 +1593,12 @@
   // Expose globally for any inline onclick fallbacks
   window.toggleMenu = toggleMenu;
 
+  // closeMenu() is called by showView() and several nav onclick handlers,
+  // but was never defined — this fixes the resulting console error.
+  window.closeMenu = function() {
+    if (_menuOpen) toggleMenu();
+  };
+
   document.addEventListener('DOMContentLoaded', function() {
     var btn = document.getElementById('hamburger');
     if (!btn) return;
