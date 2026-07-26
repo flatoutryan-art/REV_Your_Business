@@ -1606,8 +1606,9 @@
     // Remove inline onclick to avoid double-firing
     btn.removeAttribute('onclick');
 
-    // Register both pointerdown and click — debouncer prevents double-fire
-    btn.addEventListener('pointerdown', toggleMenu, { passive: false });
+    // Click alone is reliable for both touch and mouse, and browsers
+    // de-duplicate it — no need for pointerdown, which was double-firing
+    // with click on iOS Safari and causing the menu to close itself.
     btn.addEventListener('click', toggleMenu, { passive: false });
 
     // Close menu when a nav link is clicked
