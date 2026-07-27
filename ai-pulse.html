@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free AI Readiness &amp; Business Health Check | REV AI Pulse</title>
+  <meta name="description" content="Get a free, AI-generated Business Intelligence Report in under 5 minutes. Score your business across 4 dimensions and get a personalised REV engagement recommendation.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.revyourbusiness.co.za/ai-pulse.html">
+  <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/ai-pulse.html">
+  <link rel="alternate" hreflang="en" href="https://www.revyourbusiness.co.za/ai-pulse.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.revyourbusiness.co.za/ai-pulse.html">
+  <meta property="og:title" content="Free AI Readiness &amp; Business Health Check | REV AI Pulse">
+  <meta property="og:description" content="Get a free, AI-generated Business Intelligence Report in under 5 minutes. Score your business across 4 dimensions and get a personalised engagement recommendation.">
+  <meta property="og:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
+  <meta property="og:site_name" content="REV Improvement Consulting">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.revyourbusiness.co.za/ai-pulse.html">
+  <meta name="twitter:title" content="Free AI Readiness &amp; Business Health Check | REV AI Pulse">
+  <meta name="twitter:description" content="Get a free, AI-generated Business Intelligence Report in under 5 minutes. Score your business across 4 dimensions.">
+  <meta name="twitter:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CZEZ4GJF8"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1CZEZ4GJF8',{page_path:'/ai-pulse.html'});</script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32.png">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>(function(){emailjs.init('6KDuFn5muG6aC2YQA');})();</script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.revyourbusiness.co.za/"},{"@type":"ListItem","position":2,"name":"AI Pulse","item":"https://www.revyourbusiness.co.za/ai-pulse.html"}]}
+  </script>
+
 <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -59,8 +107,7 @@
       padding: 24px 48px;
       border-bottom: 1px solid var(--border);
       background: rgba(7,7,7,0.8);
-      backdrop-filter: blur(12px);
-    }
+          }
     .logo {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 20px; letter-spacing: 3px;
@@ -672,12 +719,11 @@
   body { padding-top: 90px; }
   /* ── NAV ── */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 150;
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px 60px;
     background: rgba(10,10,10,0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(76,175,101,0.15);
+        border-bottom: 1px solid rgba(76,175,101,0.15);
   }
   .nav-logo-text {
     font-family: 'Bebas Neue', sans-serif; font-size: 22px;
@@ -799,7 +845,7 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   /* ── NAV MENU OPEN STATE ── */
-  .nav-links.menu-open {
+  .nav-links.open, .nav-links.menu-open {
     display: flex !important;
     flex-direction: column;
     position: fixed;
@@ -827,8 +873,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px 60px;
     background: rgba(10,10,10,0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(76,175,101,0.15);
+        border-bottom: 1px solid rgba(76,175,101,0.15);
   }
   .nav-logo-text {
     font-family: 'Bebas Neue', sans-serif; font-size: 22px;
@@ -861,10 +906,6 @@
     .nav-links { display: none; }
     .nav-cta { display: none; }
     .hamburger { display: flex; }
-    .nav-links.open { display: flex; position: fixed; top: 57px; left: 0; right: 0; flex-direction: column; padding: 16px 20px 28px; gap: 0; background: rgba(10,10,10,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(76,175,101,0.2); z-index: 99; list-style: none; }
-    .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .nav-links li:last-child { border-bottom: none; }
-    .nav-links a { display: block; padding: 16px 4px; font-size: 15px; letter-spacing: 3px; }
     footer { grid-template-columns: 1fr; padding: 40px 20px 30px; gap: 20px; }
     .footer-right { text-align: left; }
     .footer-logo-text { font-size: 20px; }
@@ -891,7 +932,15 @@
         "addressRegion": "Gauteng",
         "postalCode": "2196",
         "addressCountry": "ZA"
-      }
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Ryan van Es",
+        "jobTitle": "Founder & Chief Consultant"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/rev-improvement-consulting"
+      ]
     }
   ]
 }
@@ -904,10 +953,13 @@
   <a href="/" class="nav-logo-text"><span>REV</span> IMPROVEMENT CONSULTING</a>
   <ul class="nav-links" id="nav-menu">
     <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
     <li><a href="/services.html">Services</a></li>
+    <li><a href="/case-studies.html">Case Studies</a></li>
     <li><a href="/faq.html">FAQs</a></li>
+    <li><a href="/partners.html">Partners</a></li>
   </ul>
-  <div style="display:flex;align-items:center;gap:16px;">
+  <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:301;">
     <a href="/#contact" class="nav-cta">Secure a Consultation</a>
     <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
   </div>
@@ -994,7 +1046,11 @@
       <div class="email-icon">📬</div>
       <div class="email-card-text">
         <h3>Want your REV AI Pulse emailed to you?</h3>
-        <p>Enter your email and we'll send you a copy of your Business Intelligence Report. Ryan may also follow up personally if the results suggest a strong fit.</p>
+        <p>Enter your details and we'll send you a copy of your Business Intelligence Report. Our team may also follow up directly if the results suggest a strong fit.</p>
+        <div class="email-input-row" style="margin-bottom:10px;">
+          <input type="text" class="email-input" id="name-input" placeholder="Your name">
+          <input type="text" class="email-input" id="company-input" placeholder="Company (optional)">
+        </div>
         <div class="email-input-row">
           <input type="email" class="email-input" id="email-input" placeholder="your@email.com">
           <button class="email-skip" onclick="document.getElementById('email-input').value=''">Skip</button>
@@ -1107,7 +1163,7 @@
     <div class="report-cta">
       <div class="cta-text">
         <h3>YOUR AI PULSE IS CLEAR. READY TO ACT?</h3>
-        <p>Book a free 30-minute consultation with Ryan to walk through your results and identify the fastest path forward.</p>
+        <p>Book a free 30-minute consultation with REV to walk through your results and identify the fastest path forward.</p>
       </div>
       <div class="cta-buttons">
         <a href="https://www.revyourbusiness.co.za/#contact" class="btn-cta">Secure a Consultation →</a>
@@ -1128,8 +1184,8 @@
       <div class="footer-tagline">Revenue · Efficiency · Vision — Strategic Growth for South African Business</div>
     </div>
     <div class="footer-right">
-      <div class="footer-contact">Ryan van Es — <a href="tel:+27716858624">+27 71 685 8624</a></div>
-      <div class="footer-contact"><a href="mailto:hello@revyourbusiness.co.za" itemprop="email">hello@revyourbusiness.co.za</a></a></div>
+      <div class="footer-contact"><a href="tel:+27716858624">+27 71 685 8624</a></div>
+      <div class="footer-contact"><a href="mailto:hello@revyourbusiness.co.za" itemprop="email">hello@revyourbusiness.co.za</a></div>
       <div class="footer-contact" style="color:rgba(255,255,255,0.2);font-size:11px;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop="streetAddress">Sandton City Office Towers</span>,
         <span itemprop="addressLocality">Sandton</span>,
@@ -1137,7 +1193,7 @@
         <span itemprop="postalCode">2196</span>,
         <meta itemprop="addressCountry" content="ZA"><span>South Africa</span>
       </div>
-      <a href="https://www.linkedin.com/company/rev-improvement-consulting" target="_blank" rel="noopener noreferrer" aria-label="Ryan van Es on LinkedIn" style="
+      <a href="https://www.linkedin.com/company/rev-improvement-consulting" target="_blank" rel="noopener noreferrer" aria-label="REV Improvement Consulting on LinkedIn" style="
         display: inline-flex; align-items: center; gap: 8px;
         margin-top: 12px;
         background: rgba(10,102,194,0.15);
@@ -1195,8 +1251,8 @@ const models = {
   diagnostic:  { name:'BUSINESS <span>DIAGNOSTIC</span>',      desc:'A focused deep-dive to identify root causes and produce a prioritised action roadmap. Ideal for businesses that need clarity before committing to a longer engagement.' },
   sprint:      { name:'STRATEGY <span>SPRINT</span>',          desc:'A high-intensity 4–8 week engagement to produce a specific strategic output fast. Perfect for a defined decision, opportunity or challenge.' },
   project:     { name:'PROJECT <span>ENGAGEMENT</span>',       desc:'A structured, outcome-driven engagement that embeds REV deeply to drive execution alongside your leadership team and deliver measurable results.' },
-  retainer:    { name:'ADVISORY <span>RETAINER</span>',        desc:'An ongoing strategic partnership where Ryan acts as your embedded Chief Strategy Officer — consistent executive thinking, accountability and momentum.' },
-  fractional:  { name:'FRACTIONAL <span>CSO</span>',           desc:'Ryan joins your leadership team part-time as Chief Strategy Officer — providing C-suite thinking and AI-augmented strategy without the full-time cost.' },
+  retainer:    { name:'ADVISORY <span>RETAINER</span>',        desc:'An ongoing strategic partnership where REV acts as your embedded Chief Strategy Officer — consistent executive thinking, accountability and momentum.' },
+  fractional:  { name:'FRACTIONAL <span>CSO</span>',           desc:'REV joins your leadership team part-time as Chief Strategy Officer — providing C-suite thinking and AI-augmented strategy without the full-time cost.' },
 };
 
 // ══════════════════════════════════════════
@@ -1546,6 +1602,8 @@ async function generateReport() {
   if (typeof gtag !== 'undefined') { gtag('event', 'ai_pulse_completed', {'lead_type': 'AI Readiness Audit'}); }
   try {
   state.email = document.getElementById('email-input').value.trim();
+  state.name = document.getElementById('name-input').value.trim();
+  state.company = document.getElementById('company-input').value.trim();
   calcScores();
 
   // Hide stages, show generating
@@ -1668,6 +1726,71 @@ async function generateReport() {
   // Stream AI narrative
   await streamNarrative();
 
+  // Email the full report via EmailJS (best-effort — never blocks showing the report)
+  try {
+    if (state.email && typeof emailjs !== 'undefined') {
+      const weakestDim = Object.entries(state.scores).sort((a,b) => a[1]-b[1])[0][0];
+      const dimNames = { revenue:'Revenue Engine', ops:'Operational Health', leadership:'Leadership Alignment', ai:'AI Readiness' };
+      const modelNamePlain = model.name.replace(/<[^>]*>/g, '');
+      const top3 = state.priorities.slice(0, 3);
+
+      await emailjs.send('service_30616fj', 'template_dvq2bxf', {
+        name: state.name || 'Not provided',
+        company: state.company || 'Not provided',
+        phone: 'Not provided',
+        email: state.email,
+        score: state.overallScore,
+        tier: band.label,
+        weak_category: dimNames[weakestDim] || weakestDim,
+        revenue_score: state.scores.revenue,
+        ops_score: state.scores.ops,
+        leadership_score: state.scores.leadership,
+        ai_score: state.scores.ai,
+        roi_range: roi.range,
+        model_name: modelNamePlain,
+        model_desc: model.desc,
+        model_reason: getModelReason(modelKey),
+        priority_1: top3[0] ? top3[0].title : '—',
+        priority_2: top3[1] ? top3[1].title : '—',
+        priority_3: top3[2] ? top3[2].title : '—',
+        narrative: document.getElementById('narrative-text').textContent,
+        message: 'REV AI Pulse assessment completed — full report below.',
+        timestamp: new Date().toLocaleString('en-ZA')
+      });
+
+      // Second send — the lead's own copy of their report
+      await emailjs.send('service_30616fj', 'template_w27vtxr', {
+        to_name: state.name || 'there',
+        to_email: state.email,
+        score: state.overallScore,
+        tier: band.label,
+        weak_category: dimNames[weakestDim] || weakestDim,
+        revenue_score: state.scores.revenue,
+        ops_score: state.scores.ops,
+        leadership_score: state.scores.leadership,
+        ai_score: state.scores.ai,
+        roi_range: roi.range,
+        model_name: modelNamePlain,
+        model_desc: model.desc,
+        model_reason: getModelReason(modelKey),
+        priority_1: top3[0] ? top3[0].title : '—',
+        priority_2: top3[1] ? top3[1].title : '—',
+        priority_3: top3[2] ? top3[2].title : '—',
+        narrative: document.getElementById('narrative-text').textContent,
+        timestamp: new Date().toLocaleString('en-ZA')
+      });
+
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'ai_pulse_email_sent', { event_category: 'Conversion', event_label: 'AI Pulse Report Email' });
+      }
+    }
+  } catch (emailErr) {
+    console.error('AI Pulse email send failed:', emailErr);
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'ai_pulse_email_failed', { event_category: 'Error', event_label: String((emailErr && emailErr.text) || emailErr) });
+    }
+  }
+
   // Show report
   await new Promise(r => setTimeout(r, 300));
   goStage(4);
@@ -1763,8 +1886,8 @@ document.addEventListener('DOMContentLoaded', function() {
     _menuOpen = !_menuOpen;
     var btn  = document.getElementById('hamburger');
     var menu = document.getElementById('nav-menu');
-    if (btn)  btn.classList.toggle('open', _menuOpen);
-    if (menu) menu.classList.toggle('menu-open', _menuOpen);
+    if (btn)  { btn.classList.toggle('open', _menuOpen); }
+    if (menu) { menu.classList.toggle('menu-open', _menuOpen); menu.classList.toggle('open', _menuOpen); }
     document.body.style.overflow = _menuOpen ? 'hidden' : '';
   }
 
@@ -1778,8 +1901,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Remove inline onclick to avoid double-firing
     btn.removeAttribute('onclick');
 
-    // Register both pointerdown and click — debouncer prevents double-fire
-    btn.addEventListener('pointerdown', toggleMenu, { passive: false });
+    // Click alone is reliable for both touch and mouse, and browsers
+    // de-duplicate it — no need for pointerdown, which was double-firing
+    // with click on iOS Safari and causing the menu to close itself.
     btn.addEventListener('click', toggleMenu, { passive: false });
 
     // Close menu when a nav link is clicked
