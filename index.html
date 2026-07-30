@@ -274,6 +274,24 @@
   }
   .strip2-desc { display: none; }
 
+  /* TESTIMONIALS */
+  #testimonials { background: var(--off-black); padding: 80px 48px; }
+  .testimonials-header { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1240px; margin: 0 auto; }
+  .testimonial-card { background: var(--charcoal); border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; padding: 32px 28px; display: flex; flex-direction: column; transition: border-color 0.3s; }
+  .testimonial-card:hover { border-color: rgba(76,175,101,0.25); }
+  .testimonial-quote-mark { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: rgba(76,175,101,0.3); line-height: 1; margin-bottom: 6px; }
+  .testimonial-pullquote { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.4; margin-bottom: 14px; }
+  .testimonial-body { font-size: 13px; color: var(--grey-light); line-height: 1.75; margin-bottom: 22px; flex: 1; }
+  .testimonial-footer { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 16px; }
+  .testimonial-name { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; color: var(--white); }
+  .testimonial-role { font-size: 12px; color: var(--grey-mid); margin-top: 3px; }
+  .testimonial-tag { display: inline-block; margin-top: 12px; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--green-bright); border: 1px solid rgba(76,175,101,0.3); padding: 4px 10px; border-radius: 2px; }
+  @media (max-width: 768px) {
+    #testimonials { padding: 48px 20px; }
+    .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+  }
+
   /* Infinity glow pulse */
   @keyframes infinityPulse {
     0%   { color: var(--green-bright); text-shadow: 0 0 0px rgba(76,175,101,0); }
@@ -1144,6 +1162,56 @@
       },
       "sameAs": [
         "https://www.linkedin.com/company/rev-improvement-consulting"
+      ],
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Richard Fraser"},
+          "reviewBody": "Bringing Ryan in as an Interim Executive and Acting CCO was one of the single best operational decisions we made. He handled everything from our complete P&L model and financial forecasting to seed funding requests and governance policies with absolute precision.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Andrew Love"},
+          "reviewBody": "Ryan served as a true catalyst for our business enablement, establishing revenue models and platform efficiencies that directly supported our global growth across seven international territories.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Alwyn Steenkamp"},
+          "reviewBody": "Ryan's advisory work and strategic consultation gave us a distinct edge when pitching to blue-chip entities, delivering immediate, high-value impact for our group.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Troy van Es"},
+          "reviewBody": "Ryan completely modernized how we operate — overhauling our website, pricing and quotation models, and introducing AI tools directly into our design workflow.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Lyle Eagleson"},
+          "reviewBody": "Ryan doesn't just consult — he drives real business movement. His ExCo advisory delivered tangible leads and new growth channels for us.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Carr Lebatha"},
+          "reviewBody": "Ryan's ExCo advisory gave us the structure, tech stack, and strategic direction we needed to launch our practice with total confidence.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Cherie Garside"},
+          "reviewBody": "Ryan was instrumental during our startup phase — guiding our tech architecture, app development, and launch strategy. His hands-on advisory turned a complex tech vision into a smooth, functional reality.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Paul Strathmore"},
+          "reviewBody": "Ryan took ownership of our custom app build from day one — architecting the tech stack, embedding practical AI capabilities, and ensuring flawless ongoing operations.",
+          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
+        }
       ]
     }
   ]
@@ -1437,6 +1505,105 @@
       <div class="strip2-desc">Unlimited capacity to adapt, evolve &amp; lead what's next</div>
     </div>
   </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" aria-label="Client Testimonials">
+    <div class="testimonials-header fade-up">
+      <div class="section-tag" style="justify-content:center;">Client Feedback</div>
+      <h2 class="section-title">WHAT CLIENTS <span class="accent">SAY</span></h2>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">One of the single best operational decisions we made.</p>
+        <p class="testimonial-body">Bringing Ryan in as an Interim Executive and Acting CCO was one of the single best operational decisions we made. He handled everything from our complete P&amp;L model and financial forecasting to seed funding requests and governance policies with absolute precision. Ryan seamlessly bridged the gap between board-level shareholder management and ground-level execution, giving our leadership team total confidence and a rock-solid commercial foundation to scale.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Richard Fraser</span></div>
+          <div class="testimonial-role">Director &amp; Shareholder, Legacy Telecoms</div>
+          <span class="testimonial-tag">Vision &amp; Leadership</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">A true catalyst for our business enablement.</p>
+        <p class="testimonial-body">Scaling operations across seven international territories requires both high-level strategic clarity and rigorous governance. Ryan served as a true catalyst for our business enablement, establishing revenue models and platform efficiencies that directly supported our global growth. His ability to streamline governance while driving regional expansion makes him an invaluable strategic advisor to any global leadership team.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Andrew Love</span></div>
+          <div class="testimonial-role">Global CEO, STS Brokers</div>
+          <span class="testimonial-tag">Vision &amp; Leadership</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">Delivered immediate, high-value impact for our group.</p>
+        <p class="testimonial-body">In the energy and mining sectors, executive-level positioning is everything. Ryan's advisory work and strategic consultation gave us a distinct edge when pitching to blue-chip entities. His ability to package complex operations into compelling executive presentations — backed by sharp business acumen and key strategic referrals — delivered immediate, high-value impact for our group.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Alwyn Steenkamp</span></div>
+          <div class="testimonial-role">CEO, Akata Holdings</div>
+          <span class="testimonial-tag">Revenue &amp; Growth</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">Completely modernized how we operate.</p>
+        <p class="testimonial-body">Ryan completely modernized how we operate. He overhauled our website, completely revamped our pricing and quotation models, and introduced AI tools directly into our design workflow. The custom 3D kitchen design app he developed and integrated has transformed our client sales process from day one. If you want to bridge traditional craftsmanship with cutting-edge tech, Ryan is the guy to call.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Troy van Es</span></div>
+          <div class="testimonial-role">Owner, HWH Designs</div>
+          <span class="testimonial-tag">AI-Augmented Strategy</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">Ryan doesn't just consult — he drives real business movement.</p>
+        <p class="testimonial-body">From sharpening our marketing and web presence to introducing practical AI workflows and connecting us to valuable networks, his ExCo advisory delivered tangible leads and new growth channels. He quickly pinpointed where our business was leaving value on the table and gave us the exact roadmap to capture it.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Lyle Eagleson</span></div>
+          <div class="testimonial-role">Director, SMGT Logistics</div>
+          <span class="testimonial-tag">Revenue &amp; Growth</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">The structure, tech stack, and strategic direction we needed.</p>
+        <p class="testimonial-body">Starting a practice comes with an overwhelming amount of moving parts. Ryan took us from initial business registration and model implementation all the way to a full website build and custom 3D render app integration. His ExCo advisory gave us the structure, tech stack, and strategic direction we needed to launch with total confidence.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Carr Lebatha</span></div>
+          <div class="testimonial-role">Owner, Pencil Architects</div>
+          <span class="testimonial-tag">Efficiency &amp; Operations</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">Turned a complex tech vision into a smooth, functional reality.</p>
+        <p class="testimonial-body">Taking a digital platform from concept to launch requires a serious mix of business strategy and technical know-how. Ryan was instrumental during our startup phase — guiding our tech architecture, app development, coding setups, and launch strategy. His hands-on advisory turned a complex tech vision into a smooth, functional reality.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Cherie Garside</span></div>
+          <div class="testimonial-role">Founder, Mum's Circle App</div>
+          <span class="testimonial-tag">AI-Augmented Strategy</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-pullquote">Excels equally at upfront product build and long-term operational maintenance.</p>
+        <p class="testimonial-body">Ryan took ownership of our custom app build from day one. He architected the tech stack, embedded practical AI capabilities, handled integrations smoothly, and continues to ensure flawless ongoing operations. It's rare to find someone who excels equally at upfront product build and long-term operational maintenance.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-name"><span>Paul Strathmore</span></div>
+          <div class="testimonial-role">Owner, PBS App</div>
+          <span class="testimonial-tag">AI-Augmented Strategy</span>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- ENGAGEMENT -->
