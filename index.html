@@ -9,6 +9,10 @@
   <link rel="canonical" href="https://www.revyourbusiness.co.za/">
   <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/">
   <link rel="alternate" hreflang="en" href="https://www.revyourbusiness.co.za/">
+  <meta name="geo.region" content="ZA-GT">
+  <meta name="geo.placename" content="Sandton, Johannesburg">
+  <meta name="geo.position" content="-26.1076;28.0567">
+  <meta name="ICBM" content="-26.1076, 28.0567">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -177,12 +181,19 @@
   .hero-subtext strong { color: var(--white); font-weight: 500; }
   .hero-actions { display: flex; gap: 16px; align-items: center; }
   .hero-right { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 80px 60px; }
-  .hero-photo-frame { position: relative; width: 380px; }
-  .hero-photo-frame::before { content: ''; position: absolute; top: -20px; left: -20px; right: 20px; bottom: 20px; border: 1px solid rgba(76,175,101,0.3); z-index: 0; }
-  .hero-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; position: relative; z-index: 1; filter: grayscale(20%); }
-  .hero-photo-label { position: absolute; bottom: -40px; left: 0; z-index: 2; background: var(--green-dark); padding: 12px 20px; border-left: 3px solid var(--green-bright); }
-  .hero-photo-label .name { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); }
-  .hero-photo-label .title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--green-light); margin-top: 2px; }
+  .hero-cred-panel { position: relative; width: 100%; max-width: 380px; background: var(--charcoal); border: 1px solid rgba(76,175,101,0.25); border-radius: 4px; padding: 44px 40px; }
+  .hero-cred-panel::before { content: ''; position: absolute; top: -16px; right: -16px; width: 60px; height: 60px; border-top: 1px solid rgba(76,175,101,0.4); border-right: 1px solid rgba(76,175,101,0.4); }
+  .hero-cred-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--green-bright); margin-bottom: 16px; }
+  .hero-cred-stat { font-family: 'Bebas Neue', sans-serif; font-size: 72px; line-height: 1; color: var(--white); }
+  .hero-cred-statlabel { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-light); margin-bottom: 24px; }
+  .hero-cred-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .hero-cred-list li { font-size: 14px; color: var(--grey-light); padding-left: 18px; position: relative; }
+  .hero-cred-list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--green-bright); }
+  .hero-cred-divider { height: 1px; background: rgba(255,255,255,0.08); margin-bottom: 24px; }
+  .hero-cred-row { display: flex; justify-content: space-between; gap: 16px; }
+  .hero-cred-row > div { display: flex; flex-direction: column; }
+  .hero-cred-num { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--green-bright); line-height: 1; }
+  .hero-cred-lbl { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey-mid); margin-top: 4px; }
 
   /* PILLARS */
   #pillars { background: var(--green-dark); display: grid; grid-template-columns: 1fr 1fr 1fr; }
@@ -461,14 +472,22 @@
   .cta-sub { font-size: 15px; font-weight: 300; color: rgba(245,245,240,0.6); }
 
   /* FOOTER */
-  footer { background: var(--black); padding: 60px 80px 40px; border-top: 1px solid rgba(255,255,255,0.05); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  footer { background: var(--black); padding: 64px 80px 32px; border-top: 1px solid rgba(255,255,255,0.05); display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; }
   .footer-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 4px; color: var(--white); }
   .footer-logo-text span { color: var(--green-bright); }
-  .footer-tagline { font-size: 13px; color: var(--grey-mid); font-weight: 300; margin-top: 8px; }
-  .footer-right { text-align: right; }
-  .footer-contact { font-size: 13px; color: var(--grey-mid); margin-bottom: 4px; }
+  .footer-tagline { font-size: 13px; color: var(--grey-mid); font-weight: 300; margin-top: 8px; line-height: 1.6; max-width: 280px; }
+  .footer-right { text-align: left; }
+  .footer-contact { font-size: 13px; color: var(--grey-mid); margin-bottom: 8px; }
   .footer-contact a { color: var(--grey-light); text-decoration: none; }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--green-bright); margin-bottom: 18px; }
+  .footer-nav-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+  .footer-nav-list a { font-size: 14px; color: var(--grey-light); text-decoration: none; transition: color 0.2s; }
+  .footer-nav-list a:hover { color: var(--green-bright); }
+  .footer-cta-btn { display: inline-block; margin-top: 18px; background: var(--green-bright); color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; padding: 12px 20px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .footer-cta-btn:hover { background: var(--green-light); }
   .footer-legal { font-size: 11px; color: rgba(255,255,255,0.15); margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); grid-column: 1 / -1; text-align: center; }
+  @media (max-width: 900px) { footer { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { footer { grid-template-columns: 1fr; padding: 40px 20px 24px; gap: 32px; } }
 
   /* ── MOBILE STICKY CTA ── */
   .mobile-cta-bar {
@@ -496,7 +515,7 @@
     .nav-links { gap: 24px; margin-right: 24px; }
     #hero { grid-template-columns: 1fr 1fr; }
     .hero-left { padding: 120px 32px 80px 40px; }
-    .hero-photo-frame { width: 300px; }
+    .hero-cred-panel { max-width: 300px; }
     .pillar { padding: 50px 32px; }
     #stats { padding: 80px 40px; }
     .stats-grid { grid-template-columns: repeat(3, 1fr); }
@@ -738,9 +757,9 @@
       order: 2;
       justify-content: center;
     }
-    .hero-photo-frame {
+    .hero-cred-panel {
       width: 100% !important;
-      max-width: 280px;
+      max-width: 320px;
       margin: 0 auto;
     }
 
@@ -1177,14 +1196,20 @@
       <div class="hero-actions"> <a href="/ai-pulse.html" class="btn-primary" data-event-category="Lead Generation" data-event-action="Click" data-event-label="AI Pulse Assessment Start" style="text-decoration:none;font-size:15px;padding:18px 44px;letter-spacing:2.5px;" onclick="if(typeof gtag!=='undefined'){gtag('event','ai_pulse_hero_click',{event_category:'Engagement',event_label:'Hero CTA'})}">⚡ CHECK YOUR BUSINESS HEALTH</a> </div>
     </div>
     <div class="hero-right">
-      <div class="hero-photo-frame">
-        <picture>
-          <source srcset="IMG_3350.webp" type="image/webp">
-          <img src="IMG_3350.jpg" alt="Ryan van Es - Founder at REV Improvement Consulting, Johannesburg South Africa" class="hero-photo" loading="eager" width="400" height="500" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a4d2e,#0a0a0a)'">
-        </picture>
-        <div class="hero-photo-label">
-          <div class="name">Ryan van Es</div>
-          <div class="title">Founder</div>
+      <div class="hero-cred-panel">
+        <div class="hero-cred-eyebrow">Trusted Across</div>
+        <div class="hero-cred-stat">4</div>
+        <div class="hero-cred-statlabel">Core Sectors</div>
+        <ul class="hero-cred-list">
+          <li>Telecommunications</li>
+          <li>Renewable Energy</li>
+          <li>Financial Services</li>
+          <li>Corporate Group Management</li>
+        </ul>
+        <div class="hero-cred-divider"></div>
+        <div class="hero-cred-row">
+          <div><span class="hero-cred-num">13+</span><span class="hero-cred-lbl">Executive Years</span></div>
+          <div><span class="hero-cred-num">120+</span><span class="hero-cred-lbl">Projects Delivered</span></div>
         </div>
       </div>
     </div>
@@ -1529,21 +1554,10 @@
       <meta itemprop="priceRange" content="ZAR ••••">
       <meta itemprop="image" content="https://www.revyourbusiness.co.za/og-image.webp">
       <meta itemprop="url" content="https://www.revyourbusiness.co.za/">
-      <div class="footer-tagline">Revenue · Efficiency · Vision — Strategic Growth for South African Business</div>
-    </div>
-    <div class="footer-right">
-      <div class="footer-contact"><a href="tel:+27716858624">+27 71 685 8624</a></div>
-      <div class="footer-contact"><a href="mailto:hello@revyourbusiness.co.za" itemprop="email">hello@revyourbusiness.co.za</a></div>
-      <div class="footer-contact" style="color:rgba(255,255,255,0.2);font-size:11px;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop="streetAddress">Sandton City Office Towers</span>,
-        <span itemprop="addressLocality">Sandton</span>,
-        <span itemprop="addressRegion">Gauteng</span>
-        <span itemprop="postalCode">2196</span>,
-        <meta itemprop="addressCountry" content="ZA"><span>South Africa</span>
-      </div>
+      <div class="footer-tagline">Strategic growth for South African enterprises. Boardroom-tested leadership. Measurable results.</div>
       <a href="https://www.linkedin.com/company/rev-improvement-consulting" target="_blank" rel="noopener noreferrer" aria-label="REV Improvement Consulting on LinkedIn" style="
         display: inline-flex; align-items: center; gap: 8px;
-        margin-top: 12px;
+        margin-top: 16px;
         background: rgba(10,102,194,0.15);
         border: 1px solid rgba(10,102,194,0.35);
         color: #6aabee;
@@ -1560,8 +1574,44 @@
         LinkedIn
       </a>
     </div>
-    <div class="footer-legal">© 2025 REV Improvement Consulting. All rights reserved. | Sandton, Gauteng, South Africa</div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <ul class="footer-nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/case-studies.html">Case Studies</a></li>
+        <li><a href="/partners.html">Partners</a></li>
+        <li><a href="/faq.html">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-nav-list">
+        <li><a href="/services.html#tab-revenue">Revenue & Growth</a></li>
+        <li><a href="/services.html#tab-efficiency">Efficiency & Operations</a></li>
+        <li><a href="/services.html#tab-vision">Vision & Leadership</a></li>
+        <li><a href="/services.html#tab-ai">AI-Augmented Strategy</a></li>
+        <li><a href="/ai-pulse.html">Free AI Pulse Check</a></li>
+        <li><a href="/find-your-rev.html">Find Your REV</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact"><a href="tel:+27716858624">+27 71 685 8624</a></div>
+      <div class="footer-contact"><a href="mailto:hello@revyourbusiness.co.za" itemprop="email">hello@revyourbusiness.co.za</a></div>
+      <div class="footer-contact" style="color:rgba(255,255,255,0.2);font-size:11px;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Sandton City Office Towers</span>,
+        <span itemprop="addressLocality">Sandton</span>,
+        <span itemprop="addressRegion">Gauteng</span>
+        <span itemprop="postalCode">2196</span>,
+        <meta itemprop="addressCountry" content="ZA"><span>South Africa</span>
+      </div>
+      <a href="/ai-pulse.html" class="footer-cta-btn">Free AI Pulse Check →</a>
+    </div>
+    <div class="footer-legal">© <span class="footer-year">2026</span> REV Improvement Consulting. All rights reserved. | Sandton, Gauteng, South Africa</div>
   </footer>
+  <script>document.querySelectorAll('.footer-year').forEach(function(el){ el.textContent = new Date().getFullYear(); });</script>
 
   <!-- MOBILE STICKY CTA -->
   <div class="mobile-cta-bar">

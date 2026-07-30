@@ -9,6 +9,10 @@
   <link rel="canonical" href="https://www.revyourbusiness.co.za/ai-pulse.html">
   <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/ai-pulse.html">
   <link rel="alternate" hreflang="en" href="https://www.revyourbusiness.co.za/ai-pulse.html">
+  <meta name="geo.region" content="ZA-GT">
+  <meta name="geo.placename" content="Sandton, Johannesburg">
+  <meta name="geo.position" content="-26.1076;28.0567">
+  <meta name="ICBM" content="-26.1076, 28.0567">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -893,15 +897,21 @@
   .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-  footer { background: #080808; padding: 60px 80px 40px; border-top: 1px solid rgba(255,255,255,0.05); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  footer { background: #080808; padding: 64px 80px 32px; border-top: 1px solid rgba(255,255,255,0.05); display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; }
   .footer-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 4px; color: #f0f0f0; }
   .footer-logo-text span { color: #5dba72; }
-  .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 300; margin-top: 8px; }
-  .footer-right { text-align: right; }
-  .footer-contact { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+  .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 300; margin-top: 8px; line-height: 1.6; max-width: 280px; }
+  .footer-right { text-align: left; }
+  .footer-contact { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
   .footer-contact a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #5dba72; margin-bottom: 18px; }
+  .footer-nav-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+  .footer-nav-list a { font-size: 14px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+  .footer-nav-list a:hover { color: #5dba72; }
+  .footer-cta-btn { display: inline-block; margin-top: 18px; background: #4caf65; color: #080808; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; padding: 12px 20px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .footer-cta-btn:hover { background: #6ecf82; }
   .footer-legal { font-size: 11px; color: rgba(255,255,255,0.15); margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); grid-column: 1 / -1; text-align: center; }
-  @media (max-width: 900px) { nav { padding: 16px 32px; } footer { padding: 50px 40px; } }
+  @media (max-width: 900px) { nav { padding: 16px 32px; } footer { padding: 50px 40px; grid-template-columns: 1fr 1fr; } }
   @media (max-width: 600px) {
     body { padding-top: 60px !important; }
     nav { padding: 14px 20px; }
@@ -1183,21 +1193,10 @@
       <meta itemprop="priceRange" content="ZAR ••••">
       <meta itemprop="image" content="https://www.revyourbusiness.co.za/og-image.webp">
       <meta itemprop="url" content="https://www.revyourbusiness.co.za/">
-      <div class="footer-tagline">Revenue · Efficiency · Vision — Strategic Growth for South African Business</div>
-    </div>
-    <div class="footer-right">
-      <div class="footer-contact"><a href="tel:+27716858624">+27 71 685 8624</a></div>
-      <div class="footer-contact"><a href="mailto:hello@revyourbusiness.co.za" itemprop="email">hello@revyourbusiness.co.za</a></div>
-      <div class="footer-contact" style="color:rgba(255,255,255,0.2);font-size:11px;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop="streetAddress">Sandton City Office Towers</span>,
-        <span itemprop="addressLocality">Sandton</span>,
-        <span itemprop="addressRegion">Gauteng</span>
-        <span itemprop="postalCode">2196</span>,
-        <meta itemprop="addressCountry" content="ZA"><span>South Africa</span>
-      </div>
+      <div class="footer-tagline">Strategic growth for South African enterprises. Boardroom-tested leadership. Measurable results.</div>
       <a href="https://www.linkedin.com/company/rev-improvement-consulting" target="_blank" rel="noopener noreferrer" aria-label="REV Improvement Consulting on LinkedIn" style="
         display: inline-flex; align-items: center; gap: 8px;
-        margin-top: 12px;
+        margin-top: 16px;
         background: rgba(10,102,194,0.15);
         border: 1px solid rgba(10,102,194,0.35);
         color: #6aabee;
@@ -1214,9 +1213,45 @@
         LinkedIn
       </a>
     </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <ul class="footer-nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/case-studies.html">Case Studies</a></li>
+        <li><a href="/partners.html">Partners</a></li>
+        <li><a href="/faq.html">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-nav-list">
+        <li><a href="/services.html#tab-revenue">Revenue & Growth</a></li>
+        <li><a href="/services.html#tab-efficiency">Efficiency & Operations</a></li>
+        <li><a href="/services.html#tab-vision">Vision & Leadership</a></li>
+        <li><a href="/services.html#tab-ai">AI-Augmented Strategy</a></li>
+        <li><a href="/ai-pulse.html">Free AI Pulse Check</a></li>
+        <li><a href="/find-your-rev.html">Find Your REV</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact"><a href="tel:+27716858624">+27 71 685 8624</a></div>
+      <div class="footer-contact"><a href="mailto:hello@revyourbusiness.co.za" itemprop="email">hello@revyourbusiness.co.za</a></div>
+      <div class="footer-contact" style="color:rgba(255,255,255,0.2);font-size:11px;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Sandton City Office Towers</span>,
+        <span itemprop="addressLocality">Sandton</span>,
+        <span itemprop="addressRegion">Gauteng</span>
+        <span itemprop="postalCode">2196</span>,
+        <meta itemprop="addressCountry" content="ZA"><span>South Africa</span>
+      </div>
+      <a href="/ai-pulse.html" class="footer-cta-btn">Free AI Pulse Check →</a>
+    </div>
     <meta itemprop="url" content="https://www.revyourbusiness.co.za">
-    <div class="footer-legal">© 2025 REV Improvement Consulting. All rights reserved. | Sandton, Gauteng, South Africa</div>
+    <div class="footer-legal">© <span class="footer-year">2026</span> REV Improvement Consulting. All rights reserved. | Sandton, Gauteng, South Africa</div>
   </footer>
+  <script>document.querySelectorAll('.footer-year').forEach(function(el){ el.textContent = new Date().getFullYear(); });</script>
 
 <script>
 // ══════════════════════════════════════════
