@@ -292,6 +292,48 @@
     .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
   }
 
+  /* ── TESTIMONIAL CAROUSEL ── */
+  .testimonial-carousel { position: relative; max-width: 1240px; margin: 0 auto; }
+  .carousel-viewport { overflow: hidden; }
+  .carousel-track {
+    display: flex; gap: 20px;
+    transition: transform 0.55s cubic-bezier(.4,0,.2,1);
+    cursor: grab; user-select: none; touch-action: pan-y;
+  }
+  .carousel-track.dragging { transition: none; cursor: grabbing; }
+  .carousel-track .testimonial-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+  }
+  @media (max-width: 1024px) {
+    .carousel-track .testimonial-card { flex: 0 0 calc((100% - 20px) / 2); }
+  }
+  @media (max-width: 768px) {
+    .carousel-track .testimonial-card { flex: 0 0 100%; }
+  }
+  .carousel-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(28,28,28,0.9); border: 1px solid rgba(76,175,101,0.3);
+    color: var(--green-bright); font-size: 18px; line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 5; transition: all 0.25s;
+  }
+  .carousel-arrow:hover { background: var(--green-bright); color: var(--black); border-color: var(--green-bright); }
+  .carousel-arrow.prev { left: -22px; }
+  .carousel-arrow.next { right: -22px; }
+  @media (max-width: 900px) {
+    .carousel-arrow.prev { left: 4px; }
+    .carousel-arrow.next { right: 4px; }
+  }
+  .carousel-dots { display: flex; justify-content: center; gap: 10px; margin-top: 32px; }
+  .carousel-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.15); border: none; cursor: pointer;
+    padding: 0; transition: all 0.25s;
+  }
+  .carousel-dot.active { background: var(--green-bright); width: 22px; border-radius: 4px; }
+
   /* Infinity glow pulse */
   @keyframes infinityPulse {
     0%   { color: var(--green-bright); text-shadow: 0 0 0px rgba(76,175,101,0); }
@@ -1178,12 +1220,6 @@
         },
         {
           "@type": "Review",
-          "author": {"@type": "Person", "name": "Alwyn Steenkamp"},
-          "reviewBody": "Ryan's advisory work and strategic consultation gave us a distinct edge when pitching to blue-chip entities, delivering immediate, high-value impact for our group.",
-          "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
-        },
-        {
-          "@type": "Review",
           "author": {"@type": "Person", "name": "Troy van Es"},
           "reviewBody": "Ryan completely modernized how we operate — overhauling our website, pricing and quotation models, and introducing AI tools directly into our design workflow.",
           "itemReviewed": {"@type": "Organization", "name": "REV Improvement Consulting"}
@@ -1514,97 +1550,107 @@
       <div class="section-tag" style="justify-content:center;">Client Feedback</div>
       <h2 class="section-title">WHAT CLIENTS <span class="accent">SAY</span></h2>
     </div>
-    <div class="testimonials-grid">
 
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">One of the single best operational decisions we made.</p>
-        <p class="testimonial-body">Bringing Ryan in as an Interim Executive and Acting CCO was one of the single best operational decisions we made. He handled everything from our complete P&amp;L model and financial forecasting to seed funding requests and governance policies with absolute precision. Ryan seamlessly bridged the gap between board-level shareholder management and ground-level execution, giving our leadership team total confidence and a rock-solid commercial foundation to scale.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Richard Fraser</span></div>
-          <div class="testimonial-role">Director &amp; Shareholder, Legacy Telecoms</div>
-          <span class="testimonial-tag">Vision &amp; Leadership</span>
+    <div class="testimonial-carousel" id="testimonial-carousel">
+      <button class="carousel-arrow prev" id="carousel-prev" type="button" aria-label="Previous testimonials">&#8249;</button>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carousel-track">
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">One of the single best operational decisions we made.</p>
+            <p class="testimonial-body">Bringing Ryan in as an Interim Executive and Acting CCO was one of the single best operational decisions we made. He handled everything from our complete P&amp;L model and financial forecasting to seed funding requests and governance policies with absolute precision. Ryan seamlessly bridged the gap between board-level shareholder management and ground-level execution, giving our leadership team total confidence and a rock-solid commercial foundation to scale.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Richard Fraser</span></div>
+              <div class="testimonial-role">Director &amp; Shareholder, Legacy Telecoms</div>
+              <span class="testimonial-tag">Vision &amp; Leadership</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">A true catalyst for our business enablement.</p>
+            <p class="testimonial-body">Scaling operations across seven international territories requires both high-level strategic clarity and rigorous governance. Ryan served as a true catalyst for our business enablement, establishing revenue models and platform efficiencies that directly supported our global growth. His ability to streamline governance while driving regional expansion makes him an invaluable strategic advisor to any global leadership team.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Andrew Love</span></div>
+              <div class="testimonial-role">Global CEO, STS Brokers</div>
+              <span class="testimonial-tag">Vision &amp; Leadership</span>
+            </div>
+          </div>
+
+          <!-- HIDDEN: Alwyn Steenkamp testimonial — commented out at Ryan's request pending an updated version. Restore by uncommenting this block.
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">Delivered immediate, high-value impact for our group.</p>
+            <p class="testimonial-body">In the energy and mining sectors, executive-level positioning is everything. Ryan's advisory work and strategic consultation gave us a distinct edge when pitching to blue-chip entities. His ability to package complex operations into compelling executive presentations — backed by sharp business acumen and key strategic referrals — delivered immediate, high-value impact for our group.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Alwyn Steenkamp</span></div>
+              <div class="testimonial-role">CEO, Akata Holdings</div>
+              <span class="testimonial-tag">Revenue &amp; Growth</span>
+            </div>
+          </div>
+          -->
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">Completely modernized how we operate.</p>
+            <p class="testimonial-body">Ryan completely modernized how we operate. He overhauled our website, completely revamped our pricing and quotation models, and introduced AI tools directly into our design workflow. The custom 3D kitchen design app he developed and integrated has transformed our client sales process from day one. If you want to bridge traditional craftsmanship with cutting-edge tech, Ryan is the guy to call.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Troy van Es</span></div>
+              <div class="testimonial-role">Owner, HWH Designs</div>
+              <span class="testimonial-tag">AI-Augmented Strategy</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">Ryan doesn't just consult — he drives real business movement.</p>
+            <p class="testimonial-body">From sharpening our marketing and web presence to introducing practical AI workflows and connecting us to valuable networks, his ExCo advisory delivered tangible leads and new growth channels. He quickly pinpointed where our business was leaving value on the table and gave us the exact roadmap to capture it.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Lyle Eagleson</span></div>
+              <div class="testimonial-role">Director, SMGT Logistics</div>
+              <span class="testimonial-tag">Revenue &amp; Growth</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">The structure, tech stack, and strategic direction we needed.</p>
+            <p class="testimonial-body">Starting a practice comes with an overwhelming amount of moving parts. Ryan took us from initial business registration and model implementation all the way to a full website build and custom 3D render app integration. His ExCo advisory gave us the structure, tech stack, and strategic direction we needed to launch with total confidence.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Carr Lebatha</span></div>
+              <div class="testimonial-role">Owner, Pencil Architects</div>
+              <span class="testimonial-tag">Efficiency &amp; Operations</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">Turned a complex tech vision into a smooth, functional reality.</p>
+            <p class="testimonial-body">Taking a digital platform from concept to launch requires a serious mix of business strategy and technical know-how. Ryan was instrumental during our startup phase — guiding our tech architecture, app development, coding setups, and launch strategy. His hands-on advisory turned a complex tech vision into a smooth, functional reality.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Cherie Garside</span></div>
+              <div class="testimonial-role">Founder, Mum's Circle App</div>
+              <span class="testimonial-tag">AI-Augmented Strategy</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-pullquote">Excels equally at upfront product build and long-term operational maintenance.</p>
+            <p class="testimonial-body">Ryan took ownership of our custom app build from day one. He architected the tech stack, embedded practical AI capabilities, handled integrations smoothly, and continues to ensure flawless ongoing operations. It's rare to find someone who excels equally at upfront product build and long-term operational maintenance.</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-name"><span>Paul Strathmore</span></div>
+              <div class="testimonial-role">Owner, PBS App</div>
+              <span class="testimonial-tag">AI-Augmented Strategy</span>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">A true catalyst for our business enablement.</p>
-        <p class="testimonial-body">Scaling operations across seven international territories requires both high-level strategic clarity and rigorous governance. Ryan served as a true catalyst for our business enablement, establishing revenue models and platform efficiencies that directly supported our global growth. His ability to streamline governance while driving regional expansion makes him an invaluable strategic advisor to any global leadership team.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Andrew Love</span></div>
-          <div class="testimonial-role">Global CEO, STS Brokers</div>
-          <span class="testimonial-tag">Vision &amp; Leadership</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">Delivered immediate, high-value impact for our group.</p>
-        <p class="testimonial-body">In the energy and mining sectors, executive-level positioning is everything. Ryan's advisory work and strategic consultation gave us a distinct edge when pitching to blue-chip entities. His ability to package complex operations into compelling executive presentations — backed by sharp business acumen and key strategic referrals — delivered immediate, high-value impact for our group.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Alwyn Steenkamp</span></div>
-          <div class="testimonial-role">CEO, Akata Holdings</div>
-          <span class="testimonial-tag">Revenue &amp; Growth</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">Completely modernized how we operate.</p>
-        <p class="testimonial-body">Ryan completely modernized how we operate. He overhauled our website, completely revamped our pricing and quotation models, and introduced AI tools directly into our design workflow. The custom 3D kitchen design app he developed and integrated has transformed our client sales process from day one. If you want to bridge traditional craftsmanship with cutting-edge tech, Ryan is the guy to call.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Troy van Es</span></div>
-          <div class="testimonial-role">Owner, HWH Designs</div>
-          <span class="testimonial-tag">AI-Augmented Strategy</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">Ryan doesn't just consult — he drives real business movement.</p>
-        <p class="testimonial-body">From sharpening our marketing and web presence to introducing practical AI workflows and connecting us to valuable networks, his ExCo advisory delivered tangible leads and new growth channels. He quickly pinpointed where our business was leaving value on the table and gave us the exact roadmap to capture it.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Lyle Eagleson</span></div>
-          <div class="testimonial-role">Director, SMGT Logistics</div>
-          <span class="testimonial-tag">Revenue &amp; Growth</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">The structure, tech stack, and strategic direction we needed.</p>
-        <p class="testimonial-body">Starting a practice comes with an overwhelming amount of moving parts. Ryan took us from initial business registration and model implementation all the way to a full website build and custom 3D render app integration. His ExCo advisory gave us the structure, tech stack, and strategic direction we needed to launch with total confidence.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Carr Lebatha</span></div>
-          <div class="testimonial-role">Owner, Pencil Architects</div>
-          <span class="testimonial-tag">Efficiency &amp; Operations</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">Turned a complex tech vision into a smooth, functional reality.</p>
-        <p class="testimonial-body">Taking a digital platform from concept to launch requires a serious mix of business strategy and technical know-how. Ryan was instrumental during our startup phase — guiding our tech architecture, app development, coding setups, and launch strategy. His hands-on advisory turned a complex tech vision into a smooth, functional reality.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Cherie Garside</span></div>
-          <div class="testimonial-role">Founder, Mum's Circle App</div>
-          <span class="testimonial-tag">AI-Augmented Strategy</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-pullquote">Excels equally at upfront product build and long-term operational maintenance.</p>
-        <p class="testimonial-body">Ryan took ownership of our custom app build from day one. He architected the tech stack, embedded practical AI capabilities, handled integrations smoothly, and continues to ensure flawless ongoing operations. It's rare to find someone who excels equally at upfront product build and long-term operational maintenance.</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-name"><span>Paul Strathmore</span></div>
-          <div class="testimonial-role">Owner, PBS App</div>
-          <span class="testimonial-tag">AI-Augmented Strategy</span>
-        </div>
-      </div>
-
+      <button class="carousel-arrow next" id="carousel-next" type="button" aria-label="Next testimonials">&#8250;</button>
     </div>
+    <div class="carousel-dots" id="carousel-dots"></div>
   </section>
 
   <!-- ENGAGEMENT -->
@@ -1788,6 +1834,185 @@
   </div>
 </div><!-- end view-main -->
 
+<script>
+(function() {
+  var track = document.getElementById('carousel-track');
+  var viewport = track ? track.parentElement : null;
+  var dotsWrap = document.getElementById('carousel-dots');
+  var prevBtn = document.getElementById('carousel-prev');
+  var nextBtn = document.getElementById('carousel-next');
+  if (!track || !viewport) return;
+
+  var cards = Array.prototype.slice.call(track.querySelectorAll('.testimonial-card'));
+  var n = cards.length;
+  var cardsPerView = 3;
+  var page = 0;
+  var pageCount = 1;
+  var autoplayMs = 6000;
+  var resumeDelayMs = 8000;
+  var autoplayTimer = null;
+  var resumeTimer = null;
+
+  function getCardsPerView() {
+    var w = window.innerWidth;
+    if (w <= 768) return 1;
+    if (w <= 1024) return 2;
+    return 3;
+  }
+
+  function cardStep() {
+    var card = cards[0];
+    if (!card) return 0;
+    var style = window.getComputedStyle(track);
+    var gap = parseFloat(style.gap) || 20;
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function maxPageStartIndex() {
+    return Math.max(0, n - cardsPerView);
+  }
+
+  function pageToStartIndex(p) {
+    var idx = p * cardsPerView;
+    return Math.min(idx, maxPageStartIndex());
+  }
+
+  function renderDots() {
+    dotsWrap.innerHTML = '';
+    pageCount = Math.max(1, Math.ceil(n / cardsPerView));
+    for (var i = 0; i < pageCount; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === page ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Go to testimonial group ' + (i + 1));
+      (function(idx) {
+        dot.addEventListener('click', function() {
+          goToPage(idx);
+          userInteracted();
+        });
+      })(i);
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    var dots = dotsWrap.querySelectorAll('.carousel-dot');
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === page); });
+  }
+
+  function goToPage(p) {
+    pageCount = Math.max(1, Math.ceil(n / cardsPerView));
+    page = ((p % pageCount) + pageCount) % pageCount;
+    var startIndex = pageToStartIndex(page);
+    var offset = startIndex * cardStep();
+    track.style.transform = 'translateX(-' + offset + 'px)';
+    updateDots();
+  }
+
+  function nextPage() { goToPage(page + 1); }
+  function prevPage() { goToPage(page - 1); }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextPage, autoplayMs);
+  }
+  function stopAutoplay() {
+    if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+  }
+  function userInteracted() {
+    stopAutoplay();
+    if (resumeTimer) clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(startAutoplay, resumeDelayMs);
+  }
+
+  /* ── Arrow clicks ── */
+  if (prevBtn) prevBtn.addEventListener('click', function() { prevPage(); userInteracted(); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { nextPage(); userInteracted(); });
+
+  /* ── Drag / swipe (pointer events unify mouse + touch) ── */
+  var isDragging = false;
+  var dragStartX = 0;
+  var dragStartOffset = 0;
+  var currentOffset = 0;
+
+  function currentTranslateX() {
+    var t = window.getComputedStyle(track).transform;
+    if (t === 'none') return 0;
+    var m = t.match(/matrix\(([^)]+)\)/);
+    if (!m) return 0;
+    var parts = m[1].split(',');
+    return parseFloat(parts[4]) || 0;
+  }
+
+  track.addEventListener('pointerdown', function(e) {
+    isDragging = true;
+    track.classList.add('dragging');
+    dragStartX = e.clientX;
+    dragStartOffset = currentTranslateX();
+    track.setPointerCapture(e.pointerId);
+    stopAutoplay();
+  });
+
+  track.addEventListener('pointermove', function(e) {
+    if (!isDragging) return;
+    var dx = e.clientX - dragStartX;
+    currentOffset = dragStartOffset + dx;
+    track.style.transform = 'translateX(' + currentOffset + 'px)';
+  });
+
+  function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    track.classList.remove('dragging');
+    var dx = currentOffset - dragStartOffset;
+    var threshold = cardStep() * 0.2;
+    if (dx < -threshold) {
+      nextPage();
+    } else if (dx > threshold) {
+      prevPage();
+    } else {
+      goToPage(page);
+    }
+    userInteracted();
+  }
+
+  track.addEventListener('pointerup', endDrag);
+  track.addEventListener('pointercancel', endDrag);
+  track.addEventListener('pointerleave', function(e) {
+    if (isDragging) endDrag(e);
+  });
+
+  /* ── Pause on hover (desktop) ── */
+  var carouselEl = document.getElementById('testimonial-carousel');
+  if (carouselEl) {
+    carouselEl.addEventListener('mouseenter', stopAutoplay);
+    carouselEl.addEventListener('mouseleave', function() {
+      if (!isDragging) startAutoplay();
+    });
+  }
+
+  /* ── Resize handling ── */
+  var resizeTimer = null;
+  window.addEventListener('resize', function() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      var newCardsPerView = getCardsPerView();
+      if (newCardsPerView !== cardsPerView) {
+        cardsPerView = newCardsPerView;
+        page = 0;
+      }
+      renderDots();
+      goToPage(page);
+    }, 150);
+  });
+
+  /* ── Init ── */
+  cardsPerView = getCardsPerView();
+  renderDots();
+  goToPage(0);
+  startAutoplay();
+})();
+</script>
 
 <script>
 (function() {
