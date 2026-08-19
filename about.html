@@ -109,33 +109,39 @@
     @media (max-width:1100px){
       .hamburger{display:flex !important;}
     }
-    #page-hero{padding:180px 80px 80px;position:relative;overflow:hidden;}
+    #page-hero{padding:200px 80px 120px;position:relative;overflow:hidden;}
     .page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8vw,110px);line-height:.95;letter-spacing:2px;color:var(--white);margin-bottom:28px;}
     .page-title .accent{color:var(--green-bright);}
-    .page-intro{font-size:clamp(16px,2vw,20px);color:var(--grey-light);max-width:760px;line-height:1.7;}
-    .section-tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--green-bright);margin-bottom:16px;}
-    .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4.5vw,58px);line-height:.98;letter-spacing:1px;margin-bottom:24px;}
+    .page-intro{font-size:clamp(16px,2vw,20px);color:var(--grey-light);max-width:760px;line-height:1.85;}
+    .section-tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--green-bright);margin-bottom:20px;}
+    .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4.5vw,58px);line-height:1.05;letter-spacing:1px;margin-bottom:32px;}
     .section-title .accent{color:var(--green-bright);}
     .section-body{font-size:16px;color:var(--grey-light);line-height:1.8;}
     .stats-strip--secondary{display:flex;flex-wrap:wrap;gap:0;background:var(--off-black);border-top:1px solid rgba(76,175,101,0.1);border-bottom:1px solid rgba(76,175,101,0.1);}
-    .strip-stat{flex:1;min-width:180px;text-align:center;padding:32px 16px;border-right:1px solid rgba(76,175,101,0.08);}
+    .strip-stat{flex:1;min-width:180px;text-align:center;padding:44px 16px;border-right:1px solid rgba(76,175,101,0.08);}
     .strip-stat:last-child{border-right:none;}
     .strip-number{display:block;font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,36px);color:var(--green-bright);letter-spacing:1px;}
     .strip-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey-mid);margin-top:6px;}
-    .about-bio-section{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;}
-    .credential-badge{display:inline-block;background:var(--charcoal);border:1px solid rgba(76,175,101,0.15);border-radius:2px;padding:14px 20px;margin-right:12px;margin-bottom:12px;}
+    .about-bio-section{display:grid;grid-template-columns:1.2fr 1fr;gap:96px;}
+    .credential-badge{display:inline-block;background:var(--charcoal);border:1px solid rgba(76,175,101,0.15);border-radius:2px;padding:18px 24px;margin-right:16px;margin-bottom:16px;}
     .credential-badge .degree{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--green-bright);}
     .credential-badge .institution{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grey-mid);}
-    .industries-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;}
+    .industries-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px;}
     .industry-item{display:flex;align-items:center;gap:10px;}
     .industry-dot{width:6px;height:6px;border-radius:50%;background:var(--green-bright);flex-shrink:0;}
     .industry-name{font-size:14px;color:var(--grey-light);}
-    #cases-cta{background:var(--charcoal);border-top:1px solid rgba(76,175,101,0.1);padding:80px;text-align:center;}
-    .cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,52px);line-height:1;letter-spacing:1px;margin-bottom:16px;}
-    .cta-sub{font-size:15px;color:var(--grey-mid);margin-bottom:32px;}
+    #section-break{position:relative;width:100%;min-height:360px;overflow:hidden;background:linear-gradient(135deg, #0a0a0a 0%, #12241a 45%, #0a0a0a 100%);display:flex;align-items:center;justify-content:center;border-top:1px solid rgba(76,175,101,0.1);border-bottom:1px solid rgba(76,175,101,0.1);padding:96px 24px;}
+    #section-break::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 40%, rgba(76,175,101,0.16) 0%, transparent 60%);pointer-events:none;}
+    .section-break-inner{position:relative;z-index:1;text-align:center;max-width:760px;}
+    .section-break-inner .section-tag{justify-content:center;display:flex;}
+    .section-break-line{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4.5vw,48px);line-height:1.1;letter-spacing:1px;color:var(--white);}
+    .section-break-line .accent{color:var(--green-bright);}
+    #cases-cta{background:var(--charcoal);border-top:1px solid rgba(76,175,101,0.1);padding:120px 80px;text-align:center;}
+    .cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,52px);line-height:1.1;letter-spacing:1px;margin-bottom:24px;}
+    .cta-sub{font-size:15px;color:var(--grey-mid);margin-bottom:44px;line-height:1.7;}
     .btn-primary{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--green-bright);color:var(--black);padding:16px 36px;text-decoration:none;cursor:pointer;border-radius:2px;transition:background .3s;}
     .btn-primary:hover{background:var(--green-light);}
-    footer{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px;padding:64px 80px 32px;border-top:1px solid rgba(76,175,101,0.08);}
+    footer{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:56px;padding:88px 80px 40px;border-top:1px solid rgba(76,175,101,0.08);}
     .footer-logo-text{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;}
     .footer-logo-text span{color:var(--green-bright);}
     .footer-tagline{font-size:13px;color:var(--grey-mid);margin-top:8px;line-height:1.6;max-width:280px;}
@@ -153,10 +159,14 @@
     .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;position:relative;z-index:301;}
     .hamburger span{width:22px;height:2px;background:var(--white);}
     @media (max-width:700px){
-      #page-hero{padding:140px 24px 56px;}
-      .about-bio-section{grid-template-columns:1fr;padding:56px 24px !important;}
-      #cases-cta{padding:56px 24px;}
-      footer{padding:40px 24px 28px;grid-template-columns:1fr;gap:28px;}
+      #page-hero{padding:150px 24px 72px;}
+      .page-intro{line-height:1.75;}
+      .about-bio-section{grid-template-columns:1fr;gap:72px;padding:80px 24px !important;}
+      .industries-grid{grid-template-columns:1fr;gap:18px;}
+      #section-break{min-height:280px;padding:64px 24px;}
+      #cases-cta{padding:80px 24px;}
+      .cta-sub{margin-bottom:36px;}
+      footer{padding:64px 24px 32px;grid-template-columns:1fr;gap:36px;}
       .footer-right{text-align:left;}
       nav{padding:14px 20px;}
     }
@@ -167,11 +177,11 @@
 <nav>
   <a href="/" class="nav-logo-text" style="text-decoration:none;cursor:pointer;"><span>REV</span> IMPROVEMENT CONSULTING</a>
   <ul class="nav-links" id="nav-menu">
+    <li><a href="/">Home</a></li>
     <li><a href="/about.html" class="active" aria-label="About REV Improvement Consulting">About</a></li>
     <li><a href="/services.html">Services</a></li>
     <li><a href="/case-studies.html" aria-label="Case Studies - REV Consulting results">Case Studies</a></li>
     <li><a href="/insights.html" aria-label="REV Insights - articles and strategic thinking">Insights</a></li>
-    <li><a href="/#engagement">Models</a></li>
     <li><a href="/faq.html" aria-label="Frequently Asked Questions">FAQs</a></li>
     <li><a href="/partners.html" aria-label="REV Partner Network and Ecosystem">Partners</a></li>
   </ul>
@@ -203,12 +213,14 @@
 </div>
 
 <!-- ABOUT CONTENT -->
-<section id="about" style="background:var(--off-black); padding:100px 80px;" class="about-bio-section">
+<section id="about" style="background:var(--off-black); padding:140px 80px;" class="about-bio-section">
   <div class="about-left">
     <div class="section-tag">Our Story</div>
     <h2 class="section-title">THE THINKING<br><span class="accent">BEHIND REV</span></h2>
-    <p class="section-body">REV Improvement Consulting was founded on a simple principle: South African businesses deserve access to the same calibre of strategic thinking that powers global enterprises. We combine boardroom-tested experience with a growing network of specialist partners to deliver outcomes, not theory.</p>
-    <p class="section-body" style="margin-top:20px;">That principle is led by founder Ryan van Es, a C-suite executive and strategic operator with over 13 years of hands-on leadership across South Africa's most demanding industries. He has built businesses from the ground up, negotiated landmark deals, turned around failing operations, and led organizations through crisis — all with measurable, documented results.</p>
+    <p class="section-body">REV Improvement Consulting was founded on a simple principle: South African businesses deserve access to the same calibre of strategic thinking that powers global enterprises.</p>
+    <p class="section-body" style="margin-top:16px;">We combine boardroom-tested experience with a growing network of specialist partners to deliver outcomes, not theory.</p>
+    <p class="section-body" style="margin-top:24px;">That principle is led by founder Ryan van Es, a C-suite executive and strategic operator with over 13 years of hands-on leadership across South Africa's most demanding industries.</p>
+    <p class="section-body" style="margin-top:16px;">He has built businesses from the ground up, negotiated landmark deals, turned around failing operations, and led organizations through crisis — all with measurable, documented results.</p>
     <div class="about-credentials" style="margin-top:40px;">
       <div class="credential-badge"><div class="degree">MBA</div><div class="institution">Regent Business School</div></div>
       <div class="credential-badge"><div class="degree">BPhil Hons</div><div class="institution">IMM · Marketing Management</div></div>
@@ -230,6 +242,14 @@
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Professional Services</span></div>
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Human Resources Placement</span></div>
     </div>
+  </div>
+</section>
+
+<!-- SECTION BREAK -->
+<section id="section-break">
+  <div class="section-break-inner">
+    <div class="section-tag">Built For South Africa</div>
+    <p class="section-break-line">STRATEGY THAT SURVIVES CONTACT<br>WITH THE <span class="accent">REAL WORLD.</span></p>
   </div>
 </section>
 
