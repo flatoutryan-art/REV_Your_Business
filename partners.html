@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Partner Network &amp; Ecosystem | REV Improvement Consulting</title>
-  <meta name="description" content="The enterprise partners and specialist network REV Improvement Consulting builds with, across energy, telecoms, and technology in South Africa.">
+  <title>The REV Stack — Tools &amp; Software We Recommend | REV Improvement Consulting</title>
+  <meta name="description" content="The accounting, payments, AI, hosting, and business software REV Improvement Consulting uses and recommends — tools we've implemented for our own business and for clients across South Africa.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.revyourbusiness.co.za/partners.html">
   <link rel="alternate" hreflang="en-ZA" href="https://www.revyourbusiness.co.za/partners.html">
@@ -17,15 +17,15 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.revyourbusiness.co.za/partners.html">
-  <meta property="og:title" content="Our Partner Network &amp; Ecosystem | REV Improvement Consulting">
-  <meta property="og:description" content="The enterprise partners and specialist network REV Improvement Consulting builds with — across energy, telecoms, and technology.">
+  <meta property="og:title" content="The REV Stack — Tools &amp; Software We Recommend | REV Improvement Consulting">
+  <meta property="og:description" content="The accounting, payments, AI, hosting, and business software REV Improvement Consulting uses and recommends across South Africa.">
   <meta property="og:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
   <meta property="og:site_name" content="REV Improvement Consulting">
   <meta property="og:locale" content="en_ZA">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.revyourbusiness.co.za/partners.html">
-  <meta name="twitter:title" content="Our Partner Network &amp; Ecosystem | REV Improvement Consulting">
-  <meta name="twitter:description" content="The enterprise partners and specialist network REV Improvement Consulting builds with — across energy, telecoms, and technology.">
+  <meta name="twitter:title" content="The REV Stack — Tools &amp; Software We Recommend | REV Improvement Consulting">
+  <meta name="twitter:description" content="The accounting, payments, AI, hosting, and business software REV Improvement Consulting uses and recommends across South Africa.">
   <meta name="twitter:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
 
   <!-- GA4 -->
@@ -43,7 +43,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32.png">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.revyourbusiness.co.za/"},{"@type":"ListItem","position":2,"name":"Partners","item":"https://www.revyourbusiness.co.za/partners.html"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.revyourbusiness.co.za/"},{"@type":"ListItem","position":2,"name":"The REV Stack","item":"https://www.revyourbusiness.co.za/partners.html"}]}
   </script>
   <script type="application/ld+json">
 {
@@ -193,14 +193,38 @@
       border-bottom: 1px solid var(--border);
       background: var(--off-black);
     }
+    .category-label-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px; gap: 16px; flex-wrap: wrap;
+    }
     .category-label {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
-      color: var(--grey-mid); margin-bottom: 20px;
+      color: var(--grey-mid);
+    }
+    .carousel-toggle-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+      background: none; border: 1px solid rgba(76,175,101,0.25);
+      color: var(--grey-light); padding: 7px 16px; border-radius: 2px;
+      cursor: pointer; transition: all .2s; display: inline-flex;
+      align-items: center; gap: 6px; touch-action: manipulation;
+    }
+    .carousel-toggle-btn:hover { border-color: var(--green); color: var(--green); }
+    .category-rail-wrap {
+      position: relative; margin-bottom: 32px;
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 32px, #000 calc(100% - 32px), transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0, #000 32px, #000 calc(100% - 32px), transparent 100%);
     }
     .category-rail {
-      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px;
+      display: flex; gap: 10px; flex-wrap: nowrap;
+      overflow-x: auto; scroll-behavior: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; -ms-overflow-style: none;
+      cursor: grab; padding: 4px 32px;
     }
+    .category-rail::-webkit-scrollbar { display: none; }
+    .category-rail.dragging { cursor: grabbing; user-select: none; }
     .cat-tag {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
@@ -208,6 +232,7 @@
       color: var(--grey-light); padding: 10px 20px; border-radius: 2px;
       cursor: pointer; transition: all .2s; white-space: nowrap;
       touch-action: manipulation; min-height: 44px;
+      flex-shrink: 0;
     }
     .cat-tag:hover, .cat-tag.active {
       border-color: var(--green); color: var(--green); background: rgba(76,175,101,0.06);
@@ -273,7 +298,7 @@
 
     /* ── PARTNER GRID ── */
     #partners-grid {
-      padding: 80px 80px 100px;
+      padding: 80px 80px 40px;
       max-width: 1200px; margin: 0 auto; width: 100%;
     }
     .grid-header {
@@ -296,7 +321,7 @@
       border: 1px solid rgba(76,175,101,0.12);
       border-radius: 4px; padding: 32px;
       transition: border-color .25s, transform .2s;
-      display: flex; flex-direction: column; gap: 16px;
+      display: flex; flex-direction: column; gap: 14px;
       width: 100%; box-sizing: border-box; overflow: hidden;
     }
     .partner-card:hover {
@@ -313,8 +338,10 @@
       border: 1px solid rgba(76,175,101,0.2);
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px; font-weight: 700; letter-spacing: 1px;
+      color: var(--green-bright);
     }
-    .partner-logo-badge svg { width: 24px; height: 24px; }
     .cat-pill {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
@@ -329,38 +356,28 @@
     .partner-summary {
       font-size: 13px; color: var(--grey-mid); line-height: 1.65;
     }
-    .partner-caps {
-      list-style: none; padding: 0; margin: 0;
-      display: flex; flex-direction: column; gap: 6px;
+    .partner-why {
+      font-size: 13px; color: var(--grey-light); line-height: 1.65;
+      padding-top: 12px; border-top: 1px solid rgba(76,175,101,0.1);
     }
-    .partner-caps li {
-      font-size: 12px; color: rgba(245,245,240,0.6);
-      padding-left: 16px; position: relative; line-height: 1.5;
-    }
-    .partner-caps li::before {
-      content: '→'; position: absolute; left: 0;
-      color: var(--green-bright); font-size: 10px;
+    .why-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--green-bright); display: block; margin-bottom: 4px;
     }
     .partner-cta {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
       color: var(--green-bright); text-decoration: none;
       display: inline-flex; align-items: center; gap: 6px;
-      padding-top: 8px; border-top: 1px solid rgba(76,175,101,0.1);
       margin-top: auto; transition: color .2s;
     }
     .partner-cta:hover { color: var(--green-light); }
-    .partner-card.placeholder {
-      border-style: dashed;
-      border-color: rgba(76,175,101,0.08);
-      background: rgba(76,175,101,0.02);
-      align-items: center; justify-content: center;
-      min-height: 220px; text-align: center;
-    }
-    .placeholder-text {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
-      color: rgba(76,175,101,0.3);
+
+    .stack-disclaimer {
+      max-width: 1200px; margin: 0 auto; padding: 0 80px 80px;
+      font-size: 12px; color: rgba(245,245,240,0.35); line-height: 1.7;
+      max-width: 720px;
     }
 
     /* ── ECOSYSTEM CTA STRIP ── */
@@ -464,7 +481,8 @@
     @media (max-width: 1024px) {
       nav { padding: 16px 32px; }
       #page-hero, #categories, #matchmaker, #ecosystem-cta { padding-left: 40px; padding-right: 40px; }
-      #partners-grid { padding: 60px 40px 80px; }
+      #partners-grid { padding: 60px 40px 40px; }
+      .stack-disclaimer { padding: 0 40px 60px; }
     }
     @media (max-width: 768px) {
       body { overflow-x: hidden; }
@@ -474,13 +492,15 @@
       .hamburger { display: flex; }
       #page-hero { padding: 100px 20px 56px; }
       #categories { padding: 40px 20px; }
-      .category-rail { gap: 8px; }
+      .category-rail { gap: 8px; padding: 4px 20px; }
       .cat-tag { font-size: 10px; padding: 10px 14px; }
+      .carousel-toggle-btn { font-size: 9px; padding: 6px 12px; }
       #matchmaker { padding: 48px 20px; }
       .matchmaker-box { padding: 28px 20px; }
-      #partners-grid { padding: 48px 20px 64px; }
+      #partners-grid { padding: 48px 20px 32px; }
       .partner-cards { grid-template-columns: 1fr; }
       .partner-card { padding: 24px 18px; }
+      .stack-disclaimer { padding: 0 20px 48px; }
       #ecosystem-cta { padding: 56px 20px; }
       .cta-row { flex-direction: column; align-items: center; }
       .btn-primary, .btn-outline { width: 100%; text-align: center; }
@@ -495,7 +515,7 @@
 </head>
 <body>
 
-<a href="#partners-grid" class="skip-link">Skip to partner directory</a>
+<a href="#partners-grid" class="skip-link">Skip to the REV Stack</a>
 
 <!-- NAV -->
 <nav role="navigation" aria-label="Main navigation">
@@ -507,7 +527,7 @@
     <li><a href="/case-studies.html">Case Studies</a></li>
     <li><a href="/insights.html" aria-label="REV Insights - articles and strategic thinking">Insights</a></li>
     <li><a href="/faq.html">FAQs</a></li>
-    <li><a href="/partners.html" class="active">Partners</a></li>
+    <li><a href="/partners.html" class="active">The REV Stack</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:301;">
     <a href="/#contact" class="nav-cta">Secure a Consultation</a>
@@ -520,174 +540,294 @@
 <!-- HERO -->
 <section id="page-hero" role="main">
   <div class="hero-inner">
-    <div class="section-tag">The REV Ecosystem</div>
-    <h1 class="page-title">THE ENTERPRISE PARTNERS<br>WE <span class="accent">TRUST TO BUILD WITH.</span></h1>
-    <p class="page-intro">Vetted specialists, energy traders, technology platforms, and operational advisors aligned to drive speed, efficiency, and value across South Africa's most demanding business environments.</p>
+    <div class="section-tag">The REV Stack</div>
+    <h1 class="page-title">TOOLS WE <span class="accent">USE, TEST, AND RECOMMEND.</span></h1>
+    <p class="page-intro">From accounting and payments to AI development and hosting — this is the working stack REV Improvement Consulting has implemented for its own business and for the clients we work with across South Africa.</p>
   </div>
 </section>
 
 <!-- CATEGORY FILTER -->
-<section id="categories" aria-label="Partner categories">
-  <div class="category-label">Browse by capability stream</div>
-  <div class="category-rail" role="group" aria-label="Category filters">
-    <button class="cat-tag active" onclick="filterPartners('all')" aria-pressed="true">
-      ALL PARTNERS
-    </button>
-    <button class="cat-tag" onclick="filterPartners('energy')" aria-pressed="false">
-      ENERGY &amp; TRADING
-      <div class="cat-sub">Wheeling · Private PPA · Utility Strategy</div>
-    </button>
-    <button class="cat-tag" onclick="filterPartners('ai')" aria-pressed="false">
-      AI &amp; AUTOMATION
-      <div class="cat-sub">RPA · Data Pipelines · Dashboards</div>
-    </button>
-    <button class="cat-tag" onclick="filterPartners('legal')" aria-pressed="false">
-      LEGAL &amp; COMPLIANCE
-      <div class="cat-sub">MoUs · Corporate Structure</div>
-    </button>
-    <button class="cat-tag" onclick="filterPartners('logistics')" aria-pressed="false">
-      SPECIALISED LOGISTICS
-      <div class="cat-sub">Connectivity · Fleet Operations</div>
+<section id="categories" aria-label="Stack categories">
+  <div class="category-label-row">
+    <div class="category-label">Browse by category</div>
+    <button type="button" class="carousel-toggle-btn" id="carousel-toggle" data-user-paused="false" aria-label="Pause auto-scroll">
+      <span id="carousel-toggle-icon">❚❚</span> <span id="carousel-toggle-text">Pause</span>
     </button>
   </div>
-  <a href="#partners-grid" class="browse-cta" aria-label="Browse all partner cards">Browse All Partners →</a>
+  <div class="category-rail-wrap">
+    <div class="category-rail" id="category-rail" role="group" aria-label="Category filters">
+      <button class="cat-tag active" onclick="filterPartners('all')" aria-pressed="true">
+        ALL TOOLS
+      </button>
+      <button class="cat-tag" onclick="filterPartners('finance')" aria-pressed="false">
+        FINANCE &amp; PAYMENTS
+        <div class="cat-sub">Accounting · Payroll · POS · Credit Vetting</div>
+      </button>
+      <button class="cat-tag" onclick="filterPartners('ai')" aria-pressed="false">
+        AI &amp; DEV TOOLS
+        <div class="cat-sub">Build · Backend · Hosting</div>
+      </button>
+      <button class="cat-tag" onclick="filterPartners('business')" aria-pressed="false">
+        BUSINESS &amp; CRM
+        <div class="cat-sub">Pipelines · Support · Workflows</div>
+      </button>
+      <button class="cat-tag" onclick="filterPartners('hosting')" aria-pressed="false">
+        DOMAINS &amp; HOSTING
+        <div class="cat-sub">Registration · Web Hosting</div>
+      </button>
+      <button class="cat-tag" onclick="filterPartners('it')" aria-pressed="false">
+        IT &amp; OPERATIONS
+        <div class="cat-sub">Device Management · Expenses</div>
+      </button>
+    </div>
+  </div>
+  <a href="#partners-grid" class="browse-cta" aria-label="Browse the full REV Stack">Browse The Full Stack →</a>
 </section>
 
 <!-- PROBLEM MATCHMAKER -->
-<section id="matchmaker" aria-label="Partner matchmaker">
+<section id="matchmaker" aria-label="Stack advisor">
   <div class="matchmaker-box">
-    <div class="section-tag">Problem Matchmaker</div>
-    <h2>NOT SURE WHICH PARTNER<br><span>YOU NEED?</span></h2>
-    <p>Describe your operational bottleneck — we'll connect you directly with the right partner or build the combined strategy.</p>
+    <div class="section-tag">Not Sure Where To Start?</div>
+    <h2>TELL US WHAT YOU'RE<br><span>TRYING TO SOLVE.</span></h2>
+    <p>Describe what you're setting up or where your current tools are falling short — we'll point you toward what's worked for us and our clients.</p>
     <textarea
       class="matchmaker-textarea"
       id="matchmaker-input"
-      placeholder="Tell us what you are scaling, where operations are breaking, or your energy goals..."
+      placeholder="Tell us what you're trying to set up, what you've tried, and where it's breaking..."
       rows="4"
-      aria-label="Describe your operational challenge"
+      aria-label="Describe what you are trying to solve"
     ></textarea>
-    <button class="matchmaker-send" onclick="sendMatchmaker()" data-event-category="Lead Generation" data-event-action="Click" data-event-label="Partner Matchmaker Submit">
+    <button class="matchmaker-send" onclick="sendMatchmaker()" data-event-category="Lead Generation" data-event-action="Click" data-event-label="Stack Advisor Submit">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      Connect Me With The Right Partner →
+      Get Pointed In The Right Direction →
     </button>
   </div>
 </section>
 
-<!-- PARTNER DIRECTORY -->
-<section id="partners-grid" aria-label="Partner directory">
+<!-- STACK DIRECTORY -->
+<section id="partners-grid" aria-label="The REV Stack directory">
   <div class="grid-header">
     <div>
-      <div class="section-tag">Vetted Network</div>
-      <h2>THE REV <span>PARTNER DIRECTORY</span></h2>
+      <div class="section-tag">The Working Stack</div>
+      <h2>TOOLS WE'VE <span>IMPLEMENTED</span></h2>
     </div>
     <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,245,240,0.25);">
-      Partners added as relationships are formalised
+      Updated as our toolkit grows
     </div>
   </div>
 
   <div class="partner-cards" id="partner-cards-container">
 
-    <!-- CARD 1: Energy & Trading -->
-    <div class="partner-card" data-category="energy">
+    <div class="partner-card" data-category="finance">
       <div class="partner-card-top">
-        <div class="partner-logo-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf65" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </div>
-        <span class="cat-pill">Energy &amp; Trading</span>
+        <div class="partner-logo-badge" aria-hidden="true">XE</div>
+        <span class="cat-pill">Accounting Software</span>
       </div>
-      <div class="partner-name">Energy Wheeling Specialist</div>
-      <p class="partner-summary">South Africa's first energy wheeling Power Purchase Agreement was structured through this network. Specialists in private PPA structuring, renewable energy procurement, and Eskom alternative strategies for commercial offtakers.</p>
-      <ul class="partner-caps">
-        <li>Private PPA negotiation and structuring</li>
-        <li>Renewable wheeling agreement management</li>
-        <li>Utility strategy and grid compliance</li>
-      </ul>
-      <a href="/#contact" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','partner_connect_click',{'partner_category':'energy'});}">Connect via REV →</a>
+      <div class="partner-name">Xero</div>
+      <p class="partner-summary">Cloud-based accounting software for small and medium businesses, handling invoicing, bank reconciliation, and financial reporting.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> We run our own books on Xero and have set up and implemented it for several client businesses — our go-to when a client needs clean, reliable financial visibility without an enterprise-level system.</p>
+      <a href="https://www.xero.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Xero'});}">Visit Xero →</a>
     </div>
 
-    <!-- CARD 2: AI & Automation -->
+    <div class="partner-card" data-category="finance">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">YO</div>
+        <span class="cat-pill">POS & Payments</span>
+      </div>
+      <div class="partner-name">YOCO</div>
+      <p class="partner-summary">South African point-of-sale and payments platform built for small merchants, from card readers to online checkout.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> We've integrated YOCO for Shopify and e-commerce clients and installed it for small merchant vendors — a fast, low-friction way to start taking payments without heavy setup overhead.</p>
+      <a href="https://www.yoco.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'YOCO'});}">Visit YOCO →</a>
+    </div>
+
+    <div class="partner-card" data-category="finance">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">SP</div>
+        <span class="cat-pill">Payroll</span>
+      </div>
+      <div class="partner-name">SimplyPay</div>
+      <p class="partner-summary">Cloud payroll software built for South African compliance (PAYE, UIF, SDL) at a startup-friendly price point.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> We set this up as the payroll solution for the Legacy MVNO build — simple and cost-effective for a growing business that doesn't need a heavyweight HR/payroll suite yet.</p>
+      <a href="https://www.simplypay.co.za" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'SimplyPay'});}">Visit SimplyPay →</a>
+    </div>
+
+    <div class="partner-card" data-category="finance">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">PF</div>
+        <span class="cat-pill">Payment Gateway</span>
+      </div>
+      <div class="partner-name">PayFast</div>
+      <p class="partner-summary">South African online payment gateway connecting e-commerce stores to local banks.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Implemented as POS and online payment integration for e-commerce stores and portals, linking through to various local RSA banks.</p>
+      <a href="https://www.payfast.co.za" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'PayFast'});}">Visit PayFast →</a>
+    </div>
+
+    <div class="partner-card" data-category="finance">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">CD</div>
+        <span class="cat-pill">Credit Bureau</span>
+      </div>
+      <div class="partner-name">Cred-it-data</div>
+      <p class="partner-summary">NCR-registered South African credit bureau (license NCRCB25) offering pay-per-use business and consumer credit vetting, pulling comparative reports from TransUnion, Experian, XDS, and SAFPS.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Low barrier to entry with easy sign-up and no subscription fees, but still delivers high-level, granular reporting — a good fit for clients who need proper credit vetting without an enterprise contract.</p>
+      <a href="https://creditdata.co.za" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Cred-it-data'});}">Visit Cred-it-data →</a>
+    </div>
+
     <div class="partner-card" data-category="ai">
       <div class="partner-card-top">
-        <div class="partner-logo-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf65" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-        </div>
-        <span class="cat-pill">AI &amp; Automation</span>
+        <div class="partner-logo-badge" aria-hidden="true">CL</div>
+        <span class="cat-pill">AI Assistant</span>
       </div>
-      <div class="partner-name">Process Automation Partner</div>
-      <p class="partner-summary">Robotic Process Automation, intelligent data pipelines, and executive-facing analytics dashboards. Built for businesses ready to move from manual operations to AI-augmented workflows without rebuilding from scratch.</p>
-      <ul class="partner-caps">
-        <li>RPA workflow design and deployment</li>
-        <li>Real-time data pipelines and dashboards</li>
-        <li>Agentic AI integration for operations</li>
-      </ul>
-      <a href="/#contact" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','partner_connect_click',{'partner_category':'ai'});}">Connect via REV →</a>
+      <div class="partner-name">Claude AI</div>
+      <p class="partner-summary">AI assistant used for development, research, and content work.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Core to how REV approaches project-based builds — from planning through to hands-on development work.</p>
+      <a href="https://claude.ai" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Claude AI'});}">Visit Claude AI →</a>
     </div>
 
-    <!-- CARD 3: Legal & Compliance -->
-    <div class="partner-card" data-category="legal">
+    <div class="partner-card" data-category="ai">
       <div class="partner-card-top">
-        <div class="partner-logo-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf65" stroke-width="1.5"><path d="M12 2L3 7v5c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z"/></svg>
-        </div>
-        <span class="cat-pill">Legal &amp; Compliance</span>
+        <div class="partner-logo-badge" aria-hidden="true">GH</div>
+        <span class="cat-pill">Version Control</span>
       </div>
-      <div class="partner-name">Corporate Structuring Advisor</div>
-      <p class="partner-summary">Memoranda of Understanding, corporate restructuring, shareholder agreements, and commercial contract drafting aligned to South African commercial law. Essential infrastructure for any growth or M&A mandate.</p>
-      <ul class="partner-caps">
-        <li>MoU and commercial contract drafting</li>
-        <li>Corporate structure and shareholder agreements</li>
-        <li>CIPC compliance and regulatory filings</li>
-      </ul>
-      <a href="/#contact" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','partner_connect_click',{'partner_category':'legal'});}">Connect via REV →</a>
+      <div class="partner-name">GitHub</div>
+      <p class="partner-summary">Version control and code hosting platform.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Where REV manages source code and collaborates across client projects.</p>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'GitHub'});}">Visit GitHub →</a>
     </div>
 
-    <!-- CARD 4: Logistics -->
-    <div class="partner-card" data-category="logistics">
+    <div class="partner-card" data-category="ai">
       <div class="partner-card-top">
-        <div class="partner-logo-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf65" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <span class="cat-pill">Specialised Logistics</span>
+        <div class="partner-logo-badge" aria-hidden="true">SB</div>
+        <span class="cat-pill">Backend & Database</span>
       </div>
-      <div class="partner-name">Connectivity &amp; Fleet Operations</div>
-      <p class="partner-summary">Enterprise connectivity infrastructure and managed fleet operations for distributed business environments. From Sandton to the Eastern Cape — the operational backbone that keeps multi-site businesses running at full speed.</p>
-      <ul class="partner-caps">
-        <li>Enterprise connectivity and network management</li>
-        <li>Fleet tracking and operational compliance</li>
-        <li>Multi-site operational scaling</li>
-      </ul>
-      <a href="/#contact" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','partner_connect_click',{'partner_category':'logistics'});}">Connect via REV →</a>
+      <div class="partner-name">Supabase</div>
+      <p class="partner-summary">Open-source backend-as-a-service providing database, authentication, and storage.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> REV's go-to backend when a client project needs a database and authentication without building that infrastructure from scratch.</p>
+      <a href="https://supabase.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Supabase'});}">Visit Supabase →</a>
     </div>
 
-    <!-- PLACEHOLDER CARDS -->
-    <div class="partner-card placeholder" data-category="all">
-      <div>
-        <div class="partner-logo-badge" style="margin:0 auto 12px;" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(76,175,101,0.3)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        </div>
-        <p class="placeholder-text">Partner slot available<br>— enquire via REV</p>
+    <div class="partner-card" data-category="ai">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">VC</div>
+        <span class="cat-pill">Hosting & Deployment</span>
       </div>
+      <div class="partner-name">Vercel</div>
+      <p class="partner-summary">Hosting and deployment platform for web applications.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Used for hosting client projects, chosen depending on whether the build is a live production app or a demo.</p>
+      <a href="https://vercel.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Vercel'});}">Visit Vercel →</a>
     </div>
 
-    <div class="partner-card placeholder" data-category="all">
-      <div>
-        <div class="partner-logo-badge" style="margin:0 auto 12px;" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(76,175,101,0.3)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        </div>
-        <p class="placeholder-text">Partner slot available<br>— enquire via REV</p>
+    <div class="partner-card" data-category="ai">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">NF</div>
+        <span class="cat-pill">Hosting & Deployment</span>
       </div>
+      <div class="partner-name">Netlify</div>
+      <p class="partner-summary">Hosting and deployment platform for static sites and web apps.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Another hosting option in REV's stack, picked based on the specific project's needs.</p>
+      <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Netlify'});}">Visit Netlify →</a>
+    </div>
+
+    <div class="partner-card" data-category="ai">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">LV</div>
+        <span class="cat-pill">AI App Builder</span>
+      </div>
+      <div class="partner-name">Lovable</div>
+      <p class="partner-summary">AI-powered app-building platform.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Used for rapid application builds as part of REV's project delivery toolkit.</p>
+      <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Lovable'});}">Visit Lovable →</a>
+    </div>
+
+    <div class="partner-card" data-category="ai">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">HC</div>
+        <span class="cat-pill">AI App Builder</span>
+      </div>
+      <div class="partner-name">Hercules</div>
+      <p class="partner-summary">AI app builder for business — build internal tools, customer apps, and websites by chatting with AI, with auth, database, hosting, and payments built in.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Part of REV's toolkit for rapid, no-code-required application builds when a client needs something live fast.</p>
+      <a href="https://hercules.app" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Hercules'});}">Visit Hercules →</a>
+    </div>
+
+    <div class="partner-card" data-category="business">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">MO</div>
+        <span class="cat-pill">CRM & Work OS</span>
+      </div>
+      <div class="partner-name">Monday.com</div>
+      <p class="partner-summary">Work OS / CRM platform for managing pipelines, projects, and team workflows.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Fully entrenched in how REV runs its own operations — we're comfortable recommending it, implementing it, and supporting clients through their own setup.</p>
+      <a href="https://monday.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Monday.com'});}">Visit Monday.com →</a>
+    </div>
+
+    <div class="partner-card" data-category="business">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">ZH</div>
+        <span class="cat-pill">Business Software</span>
+      </div>
+      <div class="partner-name">Zoho</div>
+      <p class="partner-summary">Suite of business software covering CRM, helpdesk, and customer support tools.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> We've used and set up various tools across the Zoho suite for client customer experience workflows and technical call logging.</p>
+      <a href="https://www.zoho.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Zoho'});}">Visit Zoho →</a>
+    </div>
+
+    <div class="partner-card" data-category="hosting">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">DO</div>
+        <span class="cat-pill">Domain Registrar</span>
+      </div>
+      <div class="partner-name">Domains.co.za</div>
+      <p class="partner-summary">South African domain registrar and hosting provider.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Used for REV's own domain and to manage several client domains, URL reservations, and annual hosting renewals.</p>
+      <a href="https://www.domains.co.za" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Domains.co.za'});}">Visit Domains.co.za →</a>
+    </div>
+
+    <div class="partner-card" data-category="hosting">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">AH</div>
+        <span class="cat-pill">Domain Registrar</span>
+      </div>
+      <div class="partner-name">Absolute Hosting</div>
+      <p class="partner-summary">Domain registration and hosting provider.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Used alongside Domains.co.za for domain reservation and hosting — part of the toolkit we reach for depending on what a client's setup needs.</p>
+      <a href="https://www.absolutehosting.co.za" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Absolute Hosting'});}">Visit Absolute Hosting →</a>
+    </div>
+
+    <div class="partner-card" data-category="it">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">MS</div>
+        <span class="cat-pill">IT & Device Management</span>
+      </div>
+      <div class="partner-name">Microsoft 365</div>
+      <p class="partner-summary">Microsoft's productivity and device management suite — Office apps, email, and tenant administration.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Full tenant setup across devices and ongoing management — core to the IT services REV provides for SME clients.</p>
+      <a href="https://www.microsoft.com/microsoft-365" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'Microsoft 365'});}">Visit Microsoft 365 →</a>
+    </div>
+
+    <div class="partner-card" data-category="it">
+      <div class="partner-card-top">
+        <div class="partner-logo-badge" aria-hidden="true">DN</div>
+        <span class="cat-pill">Expense Management</span>
+      </div>
+      <div class="partner-name">DriverNote</div>
+      <p class="partner-summary">Mileage and travel expense tracking app.</p>
+      <p class="partner-why"><span class="why-label">Why REV recommends it:</span> Implemented for staff travel expense claims, feeding into payroll reimbursement — a clean way to formalise what's often an informal process.</p>
+      <a href="https://www.drivernote.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-cta" onclick="if(typeof gtag!=='undefined'){gtag('event','stack_tool_click',{'tool_name':'DriverNote'});}">Visit DriverNote →</a>
     </div>
 
   </div>
 </section>
 
+<p class="stack-disclaimer">Logos and trademarks belong to their respective owners. REV Improvement Consulting is an independent user of these tools and is not affiliated with, sponsored by, or endorsed by them unless explicitly stated.</p>
+
 <!-- ECOSYSTEM CTA -->
 <section id="ecosystem-cta">
   <div class="section-tag">Build With REV</div>
-  <h2>WANT TO JOIN THE<br><span>REV PARTNER ECOSYSTEM?</span></h2>
-  <p>REV partners are vetted for quality, alignment, and execution. If your capability fills a gap in the ecosystem — let's talk.</p>
+  <h2>WANT HELP CHOOSING<br><span>OR SETTING THESE UP?</span></h2>
+  <p>REV implements and supports every tool on this page for clients directly. If your business needs help getting set up — let's talk.</p>
   <div class="cta-row">
-    <a href="/#contact" class="btn-primary" data-event-category="Lead Generation" data-event-action="Click" data-event-label="Partner Ecosystem CTA">Become a REV Partner →</a>
+    <a href="/#contact" class="btn-primary" data-event-category="Lead Generation" data-event-action="Click" data-event-label="Stack CTA">Talk To REV →</a>
     <a href="/find-your-rev.html" class="btn-outline">Find Your REV →</a>
   </div>
 </section>
@@ -775,7 +915,7 @@ function filterPartners(cat) {
   });
 
   if (typeof gtag !== 'undefined') {
-    gtag('event', 'partner_filter', {'filter_category': cat});
+    gtag('event', 'stack_filter', {'filter_category': cat});
   }
 }
 
@@ -786,28 +926,112 @@ function sendMatchmaker() {
     return;
   }
   if (typeof gtag !== 'undefined') {
-    gtag('event', 'partner_matchmaker_submit', {'lead_type': 'Partner Match Request'});
+    gtag('event', 'stack_advisor_submit', {'lead_type': 'Stack Advisor Request'});
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({'event': 'partner_matchmaker_submit', 'lead_type': 'Partner Match Request'});
+    window.dataLayer.push({'event': 'stack_advisor_submit', 'lead_type': 'Stack Advisor Request'});
   }
   // Route to Find Your REV with context
   window.location.href = '/find-your-rev.html';
 }
 </script>
 
+<!-- CATEGORY CAROUSEL JS -->
+<script>
+(function() {
+  var rail = document.getElementById('category-rail');
+  var toggleBtn = document.getElementById('carousel-toggle');
+  var toggleIcon = document.getElementById('carousel-toggle-icon');
+  var toggleText = document.getElementById('carousel-toggle-text');
+  if (!rail || !toggleBtn) return;
+
+  var autoScroll = true;
+  var direction = 1;
+  var speed = 0.5;
+  var resumeTimer = null;
+  var isDragging = false, dragMoved = false, startX = 0, startScroll = 0;
+
+  function prefersReducedMotion() {
+    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function step() {
+    if (autoScroll && !isDragging) {
+      var max = rail.scrollWidth - rail.clientWidth;
+      if (max > 2) {
+        rail.scrollLeft += speed * direction;
+        if (rail.scrollLeft >= max) { rail.scrollLeft = max; direction = -1; }
+        else if (rail.scrollLeft <= 0) { rail.scrollLeft = 0; direction = 1; }
+      }
+    }
+    requestAnimationFrame(step);
+  }
+  if (!prefersReducedMotion()) { requestAnimationFrame(step); } else { autoScroll = false; setToggleUI(true); }
+
+  function setToggleUI(paused) {
+    toggleIcon.textContent = paused ? '▶' : '❚❚';
+    toggleText.textContent = paused ? 'Play' : 'Pause';
+    toggleBtn.setAttribute('aria-label', paused ? 'Resume auto-scroll' : 'Pause auto-scroll');
+  }
+
+  function pauseTemporarily() {
+    if (toggleBtn.dataset.userPaused === 'true') return;
+    autoScroll = false;
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() {
+      if (toggleBtn.dataset.userPaused !== 'true') { autoScroll = true; }
+    }, 4000);
+  }
+
+  // Manual pause/play toggle
+  toggleBtn.addEventListener('click', function() {
+    var userPaused = toggleBtn.dataset.userPaused === 'true';
+    userPaused = !userPaused;
+    toggleBtn.dataset.userPaused = userPaused ? 'true' : 'false';
+    autoScroll = !userPaused;
+    clearTimeout(resumeTimer);
+    setToggleUI(userPaused);
+  });
+
+  // Mouse drag-to-scroll (touch devices use native overflow scrolling)
+  rail.addEventListener('pointerdown', function(e) {
+    if (e.pointerType !== 'mouse') return;
+    isDragging = true; dragMoved = false;
+    startX = e.clientX;
+    startScroll = rail.scrollLeft;
+    rail.classList.add('dragging');
+    pauseTemporarily();
+  });
+  window.addEventListener('pointermove', function(e) {
+    if (!isDragging) return;
+    var dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) dragMoved = true;
+    rail.scrollLeft = startScroll - dx;
+  });
+  window.addEventListener('pointerup', function() {
+    if (isDragging) { isDragging = false; rail.classList.remove('dragging'); }
+  });
+
+  // Suppress the filter click if the user was actually dragging
+  rail.addEventListener('click', function(e) {
+    if (dragMoved) { e.stopPropagation(); e.preventDefault(); dragMoved = false; }
+  }, true);
+
+  // Touch / wheel / keyboard interaction also pauses auto-scroll temporarily
+  rail.addEventListener('touchstart', pauseTemporarily, { passive: true });
+  rail.addEventListener('wheel', pauseTemporarily, { passive: true });
+  rail.addEventListener('keydown', pauseTemporarily);
+})();
+</script>
+
 <!-- HAMBURGER JS -->
 <script>
 (function() {
   var _menuOpen = false;
-  var _lastEvent = 0;
 
   function toggleMenu(e) {
     if (e) {
       e.preventDefault();
       e.stopPropagation();
-      var now = Date.now();
-      if (now - _lastEvent < 300) return;
-      _lastEvent = now;
     }
     _menuOpen = !_menuOpen;
     var btn  = document.getElementById('hamburger');
@@ -824,7 +1048,6 @@ function sendMatchmaker() {
     var btn = document.getElementById('hamburger');
     if (!btn) return;
     btn.removeAttribute('onclick');
-    btn.addEventListener('pointerdown', toggleMenu, { passive: false });
     btn.addEventListener('click', toggleMenu, { passive: false });
     document.querySelectorAll('#nav-menu a').forEach(function(link) {
       link.addEventListener('click', function() { if (_menuOpen) toggleMenu(); });
