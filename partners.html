@@ -965,13 +965,23 @@ function sendMatchmaker() {
     }
     requestAnimationFrame(step);
   }
-  if (!prefersReducedMotion()) { requestAnimationFrame(step); } else { autoScroll = false; setToggleUI(true); }
 
   function setToggleUI(paused) {
     toggleIcon.textContent = paused ? '▶' : '❚❚';
     toggleText.textContent = paused ? 'Play' : 'Pause';
     toggleBtn.setAttribute('aria-label', paused ? 'Resume auto-scroll' : 'Pause auto-scroll');
   }
+
+  // The animation loop always runs — it's the loop itself that checks
+  // `autoScroll` every frame, so the Play/Pause button always has
+  // something live to control. Reduced-motion only affects the
+  // starting state, not whether the loop exists.
+  if (prefersReducedMotion()) {
+    autoScroll = false;
+    toggleBtn.dataset.userPaused = 'true';
+    setToggleUI(true);
+  }
+  requestAnimationFrame(step);
 
   function pauseTemporarily() {
     if (toggleBtn.dataset.userPaused === 'true') return;
