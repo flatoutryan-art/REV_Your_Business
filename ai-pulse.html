@@ -1009,7 +1009,6 @@
         <select class="input-select" id="sector-select">
           <option value="">Select your sector</option>
           <option value="telecoms">Telecoms & Technology</option>
-          <option value="energy">Energy & Resources</option>
           <option value="financial">Financial Services</option>
           <option value="retail">Retail & Consumer</option>
           <option value="manufacturing">Manufacturing & Industrial</option>
@@ -1669,7 +1668,7 @@ async function generateReport() {
   const modelKey = getModel();
   const model  = models[modelKey];
   const sectorLabels = {
-    telecoms:'Telecoms & Technology', energy:'Energy & Resources',
+    telecoms:'Telecoms & Technology',
     financial:'Financial Services',   retail:'Retail & Consumer',
     manufacturing:'Manufacturing',    professional:'Professional Services',
     healthcare:'Healthcare',          property:'Property & Construction', other:'Business'
@@ -1854,7 +1853,7 @@ async function streamNarrative() {
   el.textContent = '';
 
   const sectorLabels = {
-    telecoms:'telecoms and technology', energy:'energy and resources',
+    telecoms:'telecoms and technology',
     financial:'financial services',     retail:'retail and consumer goods',
     manufacturing:'manufacturing and industrial', professional:'professional services',
     healthcare:'healthcare',            property:'property and construction', other:'business'
