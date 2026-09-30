@@ -242,7 +242,7 @@
 
   /* STATS */
   #stats { background: var(--off-black); padding: 80px 80px; }
-  .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
   .stat-item { padding: 32px 20px; border-right: 1px solid rgba(255,255,255,0.06); text-align: center; }
   .stat-item:last-child { border-right: none; }
   .stat-icon { width: 22px; height: 22px; color: rgba(76,175,101,0.4); margin: 0 auto 10px; display: block; }
@@ -499,12 +499,6 @@
   .page-intro { font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--grey-light); max-width: 620px; }
   .page-intro strong { color: var(--white); font-weight: 500; }
 
-  .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--green-dark); }
-  .strip-stat { padding: 22px 40px; border-right: 1px solid rgba(255,255,255,0.08); text-align: center; }
-  .stats-strip--secondary .strip-stat { padding: 36px 40px; }
-  .strip-stat:last-child { border-right: none; }
-  .strip-number { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--white); line-height: 1; display: block; }
-  .strip-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green-light); margin-top: 4px; }
 
   #cases { padding: 100px 80px; background: var(--off-black); }
   .case-block { display: grid; grid-template-columns: 340px 1fr; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 2px; transition: border-color 0.4s; position: relative; overflow: hidden; }
@@ -578,11 +572,6 @@
     .hero-cred-panel { max-width: 300px; }
     .pillar { padding: 50px 32px; }
     #stats { padding: 80px 40px; }
-    .stats-grid { grid-template-columns: repeat(3, 1fr); }
-    .stat-item:nth-child(3) { border-right: none; }
-    .stat-item:nth-child(4),
-    .stat-item:nth-child(5),
-    .stat-item:nth-child(6) { border-top: 1px solid rgba(255,255,255,0.06); }
     .stat-number { font-size: 44px; }
     .stats-strip-2 { grid-template-columns: repeat(5, 1fr); }
     .strip2-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.06); }
@@ -625,14 +614,9 @@
     .pillar-letter { font-size: 80px; }
 
     #stats { padding: 40px 0; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .stat-item { padding: 28px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06); }
-    .stat-item:nth-child(even) { border-right: none; }
-    .stat-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.06); }
-    .stat-item:nth-child(4),
-    .stat-item:nth-child(5),
-    .stat-item:nth-child(6) { border-top: none; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat-item { padding: 28px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .stat-item:last-child { border-bottom: none; }
     .stat-number { font-size: 38px; }
     .stat-label { font-size: 10px; }
     .stat-desc { font-size: 11px; }
@@ -677,10 +661,6 @@
     .form-whatsapp-alt { flex-direction: column; gap: 6px; text-align: center; }
 
     #page-hero { padding: 100px 20px 50px; }
-    .stats-strip { grid-template-columns: repeat(2, 1fr); }
-    .strip-stat { padding: 24px 16px; }
-    .stats-strip--secondary .strip-stat { padding: 36px 16px; }
-    .strip-number { font-size: 34px; }
     #cases { padding: 40px 20px; }
     .case-block { grid-template-columns: 1fr; }
     .case-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 32px 20px; }
@@ -710,11 +690,6 @@
     .btn-primary, .btn-secondary { font-size: 13px; padding: 14px 20px; }
     .case-value { font-size: 44px; }
     .engagement-cta-title { font-size: 22px; }
-    .stats-strip { grid-template-columns: 1fr 1fr; }
-    .strip-stat { padding: 20px 12px; }
-    .stats-strip--secondary .strip-stat { padding: 30px 12px; }
-    .strip-number { font-size: 28px; }
-    .strip-label { font-size: 9px; letter-spacing: 1px; }
     footer { padding: 32px 16px; }
     #contact { padding: 30px 16px; }
     #services { padding: 50px 16px 32px; }
@@ -732,8 +707,6 @@
     .stat-number { font-size: 26px; }
     .strip2-number { font-size: 14px; }
     .form-container { padding: 16px; }
-    .stats-strip { grid-template-columns: 1fr; }
-    .strip-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .case-value { font-size: 38px; }
     #contact { padding: 24px 12px; }
   }
@@ -884,8 +857,6 @@
     }
 
     /* ── STATS STRIP ── */
-    .stats-strip { grid-template-columns: 1fr 1fr !important; }
-    .stats-strip--secondary .strip-stat { padding: 24px 12px !important; }
 
     /* ── STATS STRIP 2 (TRUST METRICS) ── */
     .stats-strip-2 {
@@ -900,7 +871,6 @@
 
   @media (max-width: 480px) {
     .hero-title { font-size: clamp(38px, 11vw, 52px) !important; }
-    .stats-strip { grid-template-columns: 1fr !important; }
     .stats-strip-2 { grid-template-columns: 1fr !important; }
     .strip2-item { padding: 16px 10px !important; }
     #pillars { grid-template-columns: 1fr !important; }
@@ -1284,28 +1254,16 @@
         <div class="stat-desc">C-suite &amp; shareholder-level leadership</div>
       </div>
       <div class="stat-item">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        <span class="stat-number">500%</span>
-        <div class="stat-label">Branch Growth</div>
-        <div class="stat-desc">1 to 5 branches within 12 months</div>
-      </div>
-      <div class="stat-item">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span class="stat-number">18</span>
-        <div class="stat-label">Month Turnaround</div>
-        <div class="stat-desc">Underperforming region to profitable growth</div>
-      </div>
-      <div class="stat-item">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span class="stat-number">70+</span>
-        <div class="stat-label">Personnel Scope</div>
-        <div class="stat-desc">Group stabilization &amp; leadership</div>
-      </div>
-      <div class="stat-item">
         <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         <span class="stat-number">120+</span>
         <div class="stat-label">Projects Completed</div>
         <div class="stat-desc">End-to-end mandates delivered across sectors</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span class="stat-number">500%</span>
+        <div class="stat-label">Branch Growth</div>
+        <div class="stat-desc">1 to 5 branches within 12 months</div>
       </div>
     </div>
   </section>
