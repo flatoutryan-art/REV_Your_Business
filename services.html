@@ -206,6 +206,9 @@
   .nav-cta:hover { background: var(--green-light); }
 
   /* ── FOOTER ── */
+  .footer-social { display:flex; gap:16px; margin-top:12px; }
+  .footer-social a { display:flex; align-items:center; gap:6px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--grey-mid); text-decoration:none; transition:color 0.3s; }
+  .footer-social a:hover { color:var(--green-bright); }
   footer { background: var(--black); padding: 64px 80px 32px; border-top: 1px solid rgba(255,255,255,0.05); display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; }
   .footer-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 4px; color: var(--white); }
   .footer-logo-text span { color: var(--green-bright); }
@@ -430,6 +433,7 @@
       "sameAs": [
         "https://www.linkedin.com/company/rev-improvement-consulting"
       ],
+      "knowsAbout": ["AI Strategy & Operational Automation", "Executive Governance & RevOps", "Industrial Sustainability & ESG Strategy", "Carbon Finance Governance", "Strategic Growth & Market Expansion"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "REV Consulting Services",
@@ -437,7 +441,8 @@
           {"@type": "Offer", "itemOffered": {"@id": "https://www.revyourbusiness.co.za/services.html#tab-revenue"}},
           {"@type": "Offer", "itemOffered": {"@id": "https://www.revyourbusiness.co.za/services.html#tab-efficiency"}},
           {"@type": "Offer", "itemOffered": {"@id": "https://www.revyourbusiness.co.za/services.html#tab-vision"}},
-          {"@type": "Offer", "itemOffered": {"@id": "https://www.revyourbusiness.co.za/services.html#tab-ai"}}
+          {"@type": "Offer", "itemOffered": {"@id": "https://www.revyourbusiness.co.za/services.html#tab-ai"}},
+          {"@type": "Offer", "itemOffered": {"@id": "https://www.revyourbusiness.co.za/services.html#industrial-sustainability"}}
         ]
       }
     },
@@ -476,6 +481,46 @@
       "description": "Practical AI adoption roadmaps and embedded AI tools that integrate directly into business operations, strategy, and decision-making.",
       "provider": {"@id": "https://www.revyourbusiness.co.za/#business"},
       "areaServed": {"@type": "Country", "name": "South Africa"}
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.revyourbusiness.co.za/services.html#sprint-ai-readiness-audit",
+      "name": "AI Readiness & ROI Audit",
+      "serviceType": "AI readiness assessment",
+      "description": "Two-week fixed-scope sprint covering tech stack assessment, data security review and high-ROI use case mapping. Delivers a prioritized AI roadmap, risk matrix and executive recommendations.",
+      "provider": {"@id": "https://www.revyourbusiness.co.za/#business"},
+      "areaServed": {"@type": "Country", "name": "South Africa"},
+      "offers": {"@type": "Offer", "description": "Fixed-scope 2-week sprint. From R25,000 excl. VAT.", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 25000, "priceCurrency": "ZAR", "valueAddedTaxIncluded": false}}
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.revyourbusiness.co.za/services.html#sprint-ai-governance-playbook",
+      "name": "Executive AI & Governance Playbook",
+      "serviceType": "AI governance and policy advisory",
+      "description": "One-week fixed-scope workshop aligning the boardroom and C-suite on AI policy, vendor selection and risk management. Delivers a tailored corporate AI policy document and staff usage guidelines.",
+      "provider": {"@id": "https://www.revyourbusiness.co.za/#business"},
+      "areaServed": {"@type": "Country", "name": "South Africa"},
+      "offers": {"@type": "Offer", "description": "Fixed-scope 1-week workshop. From R18,000 excl. VAT.", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 18000, "priceCurrency": "ZAR", "valueAddedTaxIncluded": false}}
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.revyourbusiness.co.za/services.html#sprint-process-automation-prototype",
+      "name": "Process Automation Prototype",
+      "serviceType": "AI workflow and automation implementation",
+      "description": "Three-week build of a custom internal AI workflow or automation agent. Delivers a live working prototype, API integration and team onboarding.",
+      "provider": {"@id": "https://www.revyourbusiness.co.za/#business"},
+      "areaServed": {"@type": "Country", "name": "South Africa"},
+      "offers": {"@type": "Offer", "description": "Custom implementation with milestone-based billing."}
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.revyourbusiness.co.za/services.html#industrial-sustainability",
+      "name": "Industrial Sustainability & Carbon Finance Governance",
+      "serviceType": "Industrial sustainability and carbon finance advisory",
+      "description": "Advisory for OTR tyre pyrolysis solid waste diversion, circular commodity recovery (pyrolysis oil, rCB and steel) and multi-year Verra Verified Carbon Standard (VCS) credit registration frameworks.",
+      "provider": {"@id": "https://www.revyourbusiness.co.za/#business"},
+      "areaServed": {"@type": "Country", "name": "South Africa"},
+      "offers": {"@type": "Offer", "description": "Fixed-scope advisory with milestone-based governance."}
     }
   ]
 }
@@ -485,6 +530,7 @@
 <div style="height:80px"></div>
 
 <!-- ── NAVIGATION ── -->
+<style>@media (max-width:1280px){.nav-cta{padding:10px 14px!important;letter-spacing:1.5px!important;font-size:11px!important}.nav-links{gap:16px!important}}</style>
 <nav role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo-text"><span>REV</span> IMPROVEMENT CONSULTING</a>
   <ul class="nav-links" id="nav-menu">
@@ -497,7 +543,7 @@
     <li><a href="/partners.html">Partners</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:301;">
-    <a href="/#contact" class="nav-cta">Secure a Consultation</a>
+    <a href="/#contact" class="nav-cta">Book a 20-Min Alignment Call</a>
     <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -535,7 +581,7 @@
 
   <div id="tab-revenue"    class="service-panel active"><div class="service-card"><div class="service-card-number">01</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><div class="service-card-title">Market Expansion Strategy</div><p class="service-card-desc">Designing and executing blueprints to scale operations from single units to multi-regional footprints. Proven methodology that grew a business from 1 to 5 branches within 12 months.</p></div>
       <div class="service-card"><div class="service-card-number">02</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg><div class="service-card-title">Commercial Revenue Growth</div><p class="service-card-desc">Full accountability for top-line growth through sales channel management, product lifecycle oversight, and innovative go-to-market execution across South African markets.</p></div>
-      <div class="service-card"><div class="service-card-number">03</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div class="service-card-title">Strategic Partnerships &amp; Acquisitions</div><p class="service-card-desc">Identifying and negotiating high-value B2B contracts, M&amp;A opportunities, and strategic alliances — including MVNO build partnerships.</p></div>
+      <div class="service-card"><div class="service-card-number">03</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div class="service-card-title">Strategic Partnerships &amp; Acquisitions</div><p class="service-card-desc">Identifying and negotiating high-value B2B contracts, M&amp;A opportunities, and strategic alliances — including complex commercial agreements and MVNO build partnerships.</p></div>
       <div class="service-card"><div class="service-card-number">04</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><div class="service-card-title">Brand &amp; Market Intelligence</div><p class="service-card-desc">Analyzing competitor pricing, regulatory shifts (ICASA), and market dynamics to pivot commercial strategies with speed and precision before the competition does.</p></div></div>
   <div id="tab-efficiency" class="service-panel"><div class="service-card"><div class="service-card-number">01</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div class="service-card-title">P&amp;L &amp; Financial Optimization</div><p class="service-card-desc">Comprehensive oversight of OPEX, CAPEX, and 24-month cash flow analysis to ensure financial sustainability, informed budgeting, and P&amp;L accountability at every level.</p></div>
       <div class="service-card"><div class="service-card-number">02</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><div class="service-card-title">Business Process Improvement</div><p class="service-card-desc">Streamlining core internal functions — billing, debtors, commissions, technical support — to reduce operational drag, improve client retention, and increase throughput.</p></div>
@@ -550,6 +596,161 @@
       <div class="service-card"><div class="service-card-number">03</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg><div class="service-card-title">AI-Enabled Vision &amp; Forecasting</div><p class="service-card-desc">Using predictive AI models for revenue forecasting, scenario planning, and strategic decision-making — transforming raw data into executive-ready business intelligence.</p></div>
       <div class="service-card"><div class="service-card-number">04</div><svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M12 12v.01"/></svg><div class="service-card-title">AI Adoption Roadmap</div><p class="service-card-desc">Building a practical, phased AI adoption plan tailored to your business size, sector, and maturity — ensuring South African organizations become future-ready without losing operational focus.</p></div></div>
 </div>
+
+<style> is self-contained inside this block, so NOTHING in <head> is touched.
+All class names are prefixed "rev-" to avoid collisions with existing CSS.
+=====================================================================
+-->
+<style>
+  .rev-band{position:relative;z-index:1;background:#1E293B;border-top:1px solid rgba(248,250,252,.08);border-bottom:1px solid rgba(248,250,252,.08);color:#F8FAFC}
+  .rev-band--alt{background:#243247}
+  .rev-wrap{max-width:1200px;margin:0 auto;padding:72px 48px}
+  .rev-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#4caf65;margin:0 0 14px}
+  .rev-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4.5vw,56px);line-height:1;letter-spacing:1.5px;margin:0 0 16px;color:#F8FAFC}
+  .rev-lead{font-size:16px;line-height:1.75;color:#CBD5E1;max-width:680px;margin:0 0 40px}
+  .rev-grid{display:grid;gap:20px}
+  .rev-grid--3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .rev-grid--4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .rev-card{display:flex;flex-direction:column;background:#273449;border:1px solid rgba(248,250,252,.1);border-radius:12px;padding:28px 26px;transition:transform .2s,border-color .2s;scroll-margin-top:100px}
+  .rev-card:hover{transform:translateY(-3px);border-color:rgba(76,175,101,.55)}
+  .rev-badge{align-self:flex-start;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4caf65;background:rgba(76,175,101,.12);border-radius:999px;padding:5px 12px;margin-bottom:16px}
+  .rev-card h3{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;letter-spacing:.5px;line-height:1.15;margin:0 0 12px;color:#F8FAFC}
+  .rev-purpose{font-size:14px;line-height:1.7;color:#CBD5E1;margin:0 0 20px}
+  .rev-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#94A3B8;margin:0 0 10px}
+  .rev-list{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:8px;flex:1}
+  .rev-list li{position:relative;padding-left:20px;font-size:14px;line-height:1.55;color:#F1F5F9}
+  .rev-list li::before{content:'\2192';position:absolute;left:0;color:#4caf65}
+  .rev-price{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;border-top:1px solid rgba(248,250,252,.1);padding-top:16px;margin:0 0 18px;font-size:13px;color:#CBD5E1}
+  .rev-price strong{color:#F8FAFC;font-weight:600}
+  .rev-price span{color:#8fd4a0;font-weight:600}
+  .rev-btn{display:inline-flex;justify-content:center;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;background:#4caf65;color:#0f172a;padding:14px 22px;border-radius:999px;transition:background .2s,transform .2s;text-align:center}
+  .rev-btn:hover{background:#8fd4a0;transform:translateY(-1px)}
+  .rev-link{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4caf65;text-decoration:none}
+  .rev-link:hover{color:#8fd4a0}
+  .rev-btn--ghost{background:transparent;color:#F8FAFC;border:1px solid rgba(248,250,252,.35)}
+  .rev-btn--ghost:hover{background:rgba(248,250,252,.08);border-color:#4caf65;color:#F8FAFC}
+  .rev-vs{margin:0 0 6px;font-size:14px;line-height:1.65;color:#F1F5F9}
+  .rev-vs b{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#4caf65;display:block;margin-bottom:2px}
+  .rev-vs--old{color:#94A3B8;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(248,250,252,.15)}
+  .rev-vs--old b{color:#94A3B8}
+  .rev-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  @media (max-width:768px){
+    .rev-wrap{padding:48px 20px}
+    .rev-actions .rev-btn{width:100%}
+  }
+</style>
+
+<!-- ============ INDUSTRIAL SUSTAINABILITY ADVISORY ============ -->
+<section id="industrial-sustainability" class="rev-band rev-band--alt" aria-labelledby="indsus-h">
+  <div class="rev-wrap">
+    <p class="rev-eyebrow">Industrial Sustainability Advisory</p>
+    <h2 id="indsus-h" class="rev-h2">Industrial Sustainability &amp; Carbon Finance Governance</h2>
+    <p class="rev-lead">Industrial Sustainability &amp; ESG Strategy is one of REV's four strategic pillars, alongside AI Strategy &amp; Operational Automation, Executive Governance &amp; RevOps, and Strategic Growth &amp; Market Expansion.</p>
+    <article class="rev-card">
+      <p class="rev-label">Scope</p>
+      <ul class="rev-list">
+        <li>Advisory for OTR tyre pyrolysis solid waste diversion</li>
+        <li>Circular commodity recovery: pyrolysis oil, rCB and steel</li>
+        <li>Multi-year Verra Verified Carbon Standard (VCS) credit registration frameworks</li>
+      </ul>
+      <p class="rev-price"><strong>Fixed-Scope Advisory</strong> <span aria-hidden="true">|</span> <span>Milestone-Based Governance</span></p>
+      <div class="rev-actions" style="margin-top:0">
+        <a class="rev-btn" href="/#contact">Request a Fixed-Scope Proposal</a>
+        <a class="rev-link" href="/insights/mining-otr-tyre-pyrolysis-sustainability.html">Read: OTR tyre pyrolysis →</a>
+        <a class="rev-link" href="/insights/verra-vcu-carbon-credits-mining-pyrolysis.html">Read: Verra VCU registration →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PRODUCTIZED ADVISORY SPRINTS ============ -->
+<section id="sprints" class="rev-band" aria-labelledby="sprints-h">
+  <div class="rev-wrap">
+    <p class="rev-eyebrow">Productized Advisory Sprints</p>
+    <h2 id="sprints-h" class="rev-h2">Fixed scope. Fixed timeline. Clear investment.</h2>
+    <p class="rev-lead">Three defined engagements that get you from question to working answer fast. You know the deliverables, the timeline and the starting investment before we begin.</p>
+
+    <div class="rev-grid rev-grid--3">
+      <article class="rev-card" id="sprint-ai-readiness-audit">
+        <span class="rev-badge">Sprint 1 &middot; 2-Week Sprint</span>
+        <h3>AI Readiness &amp; ROI Audit</h3>
+        <p class="rev-purpose">Tech stack assessment, data security review, and high-ROI use case mapping.</p>
+        <p class="rev-label">Deliverables</p>
+        <ul class="rev-list">
+          <li>Prioritized AI Roadmap</li>
+          <li>Risk Matrix</li>
+          <li>Executive Recommendations</li>
+        </ul>
+        <p class="rev-price"><strong>Fixed-Scope Sprint</strong> <span aria-hidden="true">|</span> <span>From R25,000 (Excl. VAT)</span></p>
+        <a class="rev-btn" href="/#contact">Request a Fixed-Scope Proposal</a>
+      </article>
+
+      <article class="rev-card" id="sprint-ai-governance-playbook">
+        <span class="rev-badge">Sprint 2 &middot; 1-Week Alignment</span>
+        <h3>Executive AI &amp; Governance Playbook</h3>
+        <p class="rev-purpose">Boardroom and C-suite alignment on AI policy, vendor selection, and risk management.</p>
+        <p class="rev-label">Deliverables</p>
+        <ul class="rev-list">
+          <li>Tailored Corporate AI Policy Document</li>
+          <li>Staff Usage Guidelines</li>
+        </ul>
+        <p class="rev-price"><strong>Fixed-Scope Workshop</strong> <span aria-hidden="true">|</span> <span>From R18,000 (Excl. VAT)</span></p>
+        <a class="rev-btn" href="/#contact">Request a Fixed-Scope Proposal</a>
+      </article>
+
+      <article class="rev-card" id="sprint-process-automation-prototype">
+        <span class="rev-badge">Sprint 3 &middot; 3-Week Build</span>
+        <h3>Process Automation Prototype</h3>
+        <p class="rev-purpose">Hands-on implementation of a custom internal AI workflow or automation agent.</p>
+        <p class="rev-label">Deliverables</p>
+        <ul class="rev-list">
+          <li>Live working prototype</li>
+          <li>API integration</li>
+          <li>Team onboarding</li>
+        </ul>
+        <p class="rev-price"><strong>Custom Implementation</strong> <span aria-hidden="true">|</span> <span>Milestone-Based Billing</span></p>
+        <a class="rev-btn" href="/#contact">Request a Fixed-Scope Proposal</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY REV VS. TRADITIONAL CONSULTING ============ -->
+<section id="why-rev" class="rev-band rev-band--alt" aria-labelledby="why-h">
+  <div class="rev-wrap">
+    <p class="rev-eyebrow">Why REV vs. Traditional Consulting</p>
+    <h2 id="why-h" class="rev-h2">Built for speed, clarity and accountability.</h2>
+    <p class="rev-lead">The difference shows up in how fast you see results, how predictable the cost is, and who is actually in the room.</p>
+
+    <div class="rev-grid rev-grid--4">
+      <article class="rev-card">
+        <h3>Weeks, Not Months</h3>
+        <p class="rev-vs"><b>REV</b>Working AI and RevOps prototypes delivered in 14&ndash;30 days.</p>
+        <p class="rev-vs rev-vs--old"><b>Traditional</b>3-to-6-month slide deck phases before seeing any tangible output.</p>
+      </article>
+      <article class="rev-card">
+        <h3>Fixed Sprints, Zero Scope Creep</h3>
+        <p class="rev-vs"><b>REV</b>Milestone-based, transparent pricing from R18,000 (Excl. VAT).</p>
+        <p class="rev-vs rev-vs--old"><b>Traditional</b>Open-ended hourly billing with unpredictable budget blowouts.</p>
+      </article>
+      <article class="rev-card">
+        <h3>Principal Execution</h3>
+        <p class="rev-vs"><b>REV</b>Direct boardroom and technical advisory from founder Ryan van Es.</p>
+        <p class="rev-vs rev-vs--old"><b>Traditional</b>Heavy junior team delegation and partner hand-offs.</p>
+      </article>
+      <article class="rev-card">
+        <h3>Practical Automation</h3>
+        <p class="rev-vs"><b>REV</b>Embedded operational workflows tailored for South African business realities.</p>
+        <p class="rev-vs rev-vs--old"><b>Traditional</b>Generic theoretical frameworks that stop at recommendations.</p>
+      </article>
+    </div>
+
+    <div class="rev-actions">
+      <a class="rev-btn" href="/#contact">Book a 20-Min Alignment Call</a>
+      <a class="rev-btn rev-btn--ghost" href="/#contact">Request a Fixed-Scope Proposal</a>
+    </div>
+  </div>
+</section>
 
 <!-- CTA BLOCK -->
 <section style="background:linear-gradient(135deg,rgba(26,77,46,0.25) 0%,rgba(10,10,10,0.95) 100%);border-top:1px solid rgba(76,175,101,0.15);border-bottom:1px solid rgba(76,175,101,0.15);padding:56px 48px;text-align:center;">
@@ -572,6 +773,24 @@
       <meta itemprop="image" content="https://www.revyourbusiness.co.za/og-image.webp">
       <meta itemprop="url" content="https://www.revyourbusiness.co.za/">
       <div class="footer-tagline">Strategic growth for South African enterprises. Boardroom-tested leadership. Measurable results.</div>
+      <a href="https://www.linkedin.com/in/ryan-van-es-47b1585b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" style="
+        display: inline-flex; align-items: center; gap: 8px;
+        margin-top: 16px;
+        background: rgba(10,102,194,0.15);
+        border: 1px solid rgba(10,102,194,0.35);
+        color: #6aabee;
+        padding: 8px 16px; border-radius: 2px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+        text-decoration: none;
+        transition: all .2s;
+      " onmouseover="this.style.background='rgba(10,102,194,0.28)';this.style.borderColor='rgba(10,102,194,0.6)'"
+         onmouseout="this.style.background='rgba(10,102,194,0.15)';this.style.borderColor='rgba(10,102,194,0.35)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#6aabee" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>
@@ -592,6 +811,7 @@
         <li><a href="/services.html#tab-efficiency">Efficiency & Operations</a></li>
         <li><a href="/services.html#tab-vision">Vision & Leadership</a></li>
         <li><a href="/services.html#tab-ai">AI-Augmented Strategy</a></li>
+      <li><a href="/services.html#industrial-sustainability">Industrial Sustainability</a></li>
         <li><a href="/ai-pulse.html">Free AI Pulse Check</a></li>
         <li><a href="/find-your-rev.html">Find Your REV</a></li>
       </ul>

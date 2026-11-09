@@ -100,6 +100,7 @@
       .faq-cta-text { font-size: 26px; }
       footer { padding: 32px 24px; }
       .footer-right { text-align: left; }
+      .footer-social { justify-content: center; }
       .footer-bottom { padding: 16px 24px; flex-direction: column; text-align: center; }
     }
     @media (max-width: 360px) {
@@ -147,6 +148,9 @@
   .nav-cta:hover { background: var(--green-light); }
 
   /* ── FOOTER ── */
+  .footer-social { display:flex; gap:16px; margin-top:12px; }
+  .footer-social a { display:flex; align-items:center; gap:6px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--grey-mid); text-decoration:none; transition:color 0.3s; }
+  .footer-social a:hover { color:var(--green-bright); }
   footer { background: var(--black); padding: 64px 80px 32px; border-top: 1px solid rgba(255,255,255,0.05); display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; align-items: start; }
   .footer-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 4px; color: var(--white); }
   .footer-logo-text span { color: var(--green-bright); }
@@ -288,7 +292,8 @@
       },
       "sameAs": [
         "https://www.linkedin.com/company/rev-improvement-consulting"
-      ]
+      ],
+      "knowsAbout": ["AI Strategy & Operational Automation", "Executive Governance & RevOps", "Industrial Sustainability & ESG Strategy", "Carbon Finance Governance", "Strategic Growth & Market Expansion"]
     }
   ]
 }
@@ -308,6 +313,14 @@
     },
     {
       "@type": "Question",
+      "name": "Do you charge hourly or offer fixed pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We do not bill by the hour. Our core advisory and AI implementations are structured as fixed-scope, transparent sprints from R18,000 (excl. VAT). Ongoing retainers and interim executive mandates are scoped separately based on defined monthly capacity."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How long does a consulting engagement typically take?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -319,7 +332,7 @@
       "name": "What industries does REV Improvement Consulting specialise in?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "REV has deep, hands-on executive experience across three sectors: Telecommunications, Financial Services (including Insurance Brokerage), and Corporate Group Management. REV also works with businesses outside these sectors where the strategic or operational challenge aligns with core competencies."
+        "text": "REV has deep, hands-on executive experience across Telecommunications, Financial Services and Corporate Group Management, and advises on industrial sustainability in Mining & Industrial Operations, covering waste diversion and carbon finance governance. REV also works with businesses outside these sectors where the strategic or operational challenge aligns with core competencies."
       }
     },
     {
@@ -328,6 +341,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "REV embeds practical AI tools directly into client operations, including AI-assisted market analysis, revenue forecasting, process automation, and decision-support systems for leadership teams. Every engagement considers where AI can amplify human decision-making and deliver measurable ROI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can AI drive business scale and innovation in South Africa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "South African businesses that adopt AI strategically now will outpace competitors by a significant margin over the next 3 to 5 years. AI enables scale without proportional headcount growth — automating routine processes, surfacing insights from data you already have, and enabling faster, better-informed decisions at every level of the business. REV's AI Adoption Roadmap service maps your specific business context to practical AI use cases, builds internal capability and ensures your team drives AI-led innovation as a sustainable competitive advantage — not a one-time project. The businesses winning in South Africa tomorrow are building this capability today."
       }
     },
     {
@@ -361,6 +382,7 @@
 
   <!-- NAV -->
   <!-- ── NAVIGATION ── -->
+<style>@media (max-width:1280px){.nav-cta{padding:10px 14px!important;letter-spacing:1.5px!important;font-size:11px!important}.nav-links{gap:16px!important}}</style>
 <nav role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo-text"><span>REV</span> IMPROVEMENT CONSULTING</a>
   <ul class="nav-links" id="nav-menu">
@@ -373,7 +395,7 @@
     <li><a href="/partners.html">Partners</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:301;">
-    <a href="/#contact" class="nav-cta">Secure a Consultation</a>
+    <a href="/#contact" class="nav-cta">Book a 20-Min Alignment Call</a>
     <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -411,6 +433,22 @@
       </div>
     </div>
 
+    <!-- FAQ: Hourly vs fixed pricing -->
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+        <span class="faq-q-text" itemprop="name">Do you charge hourly or offer fixed pricing?</span>
+        <span class="faq-icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="7" y1="1" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/><line x1="1" y1="7" x2="13" y2="7" stroke="currentColor" stroke-width="1.5"/></svg>
+        </span>
+      </button>
+      <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div class="faq-answer-inner" itemprop="text">
+          <span class="faq-tag">Pricing</span>
+          <p>We do not bill by the hour. Our core advisory and AI implementations are structured as fixed-scope, transparent sprints from R18,000 (excl. VAT). Ongoing retainers and interim executive mandates are scoped separately based on defined monthly capacity.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- FAQ 2 -->
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
       <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
@@ -440,9 +478,9 @@
       <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <div class="faq-answer-inner" itemprop="text">
           <span class="faq-tag">Industries</span>
-          <p>REV has deep, hands-on executive experience across three sectors: <strong>Telecommunications</strong> (MVNO builds, regulatory strategy, commercial growth), <strong>Financial Services</strong> (insurance brokerage, commercial and corporate), and <strong>Corporate Group Management</strong> (multi-entity oversight, governance and turnaround).</p>
+          <p>REV has deep, hands-on executive experience across <strong>Telecommunications</strong> (MVNO builds, regulatory strategy, commercial growth), <strong>Financial Services</strong> (commercial and corporate insurance brokerage) and <strong>Corporate Group Management</strong> (multi-entity oversight, governance and turnaround), and advises on industrial sustainability in <strong>Mining &amp; Industrial Operations</strong> (waste diversion and carbon finance governance).</p>
           <br>
-          <p>This cross-sector depth is a deliberate advantage — proven frameworks from one industry become competitive weapons in another. REV also works with businesses outside these three sectors where the strategic or operational challenge aligns with core competencies.</p>
+          <p>This cross-sector depth is a deliberate advantage — proven frameworks from one industry become competitive weapons in another. REV also works with businesses outside these four sectors where the strategic or operational challenge aligns with core competencies.</p>
         </div>
       </div>
     </div>
@@ -520,7 +558,7 @@
         <div class="faq-cta-text">STILL HAVE <span>QUESTIONS?</span></div>
         <div class="faq-cta-sub">Every enquiry gets a direct, personal response — usually within 24 hours.</div>
       </div>
-      <a href="/#contact" class="btn-primary" aria-label="Contact REV Improvement Consulting">Start the Conversation →</a>
+      <a href="/#contact" class="btn-primary" aria-label="Contact REV Improvement Consulting">Book a 20-Min Alignment Call →</a>
     </div>
 
   </main>
@@ -534,6 +572,24 @@
       <meta itemprop="image" content="https://www.revyourbusiness.co.za/og-image.webp">
       <meta itemprop="url" content="https://www.revyourbusiness.co.za/">
       <div class="footer-tagline">Strategic growth for South African enterprises. Boardroom-tested leadership. Measurable results.</div>
+      <a href="https://www.linkedin.com/in/ryan-van-es-47b1585b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" style="
+        display: inline-flex; align-items: center; gap: 8px;
+        margin-top: 16px;
+        background: rgba(10,102,194,0.15);
+        border: 1px solid rgba(10,102,194,0.35);
+        color: #6aabee;
+        padding: 8px 16px; border-radius: 2px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+        text-decoration: none;
+        transition: all .2s;
+      " onmouseover="this.style.background='rgba(10,102,194,0.28)';this.style.borderColor='rgba(10,102,194,0.6)'"
+         onmouseout="this.style.background='rgba(10,102,194,0.15)';this.style.borderColor='rgba(10,102,194,0.35)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#6aabee" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>
@@ -554,6 +610,7 @@
         <li><a href="/services.html#tab-efficiency">Efficiency & Operations</a></li>
         <li><a href="/services.html#tab-vision">Vision & Leadership</a></li>
         <li><a href="/services.html#tab-ai">AI-Augmented Strategy</a></li>
+      <li><a href="/services.html#industrial-sustainability">Industrial Sustainability</a></li>
         <li><a href="/ai-pulse.html">Free AI Pulse Check</a></li>
         <li><a href="/find-your-rev.html">Find Your REV</a></li>
       </ul>

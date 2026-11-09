@@ -73,7 +73,8 @@
       },
       "sameAs": [
         "https://www.linkedin.com/company/rev-improvement-consulting"
-      ]
+      ],
+      "knowsAbout": ["AI Strategy & Operational Automation", "Executive Governance & RevOps", "Industrial Sustainability & ESG Strategy", "Carbon Finance Governance", "Strategic Growth & Market Expansion"]
     }
   ]
 }
@@ -128,7 +129,6 @@
     .credential-badge .institution{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grey-mid);}
     .industries-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px;}
     .industry-item{display:flex;align-items:center;gap:10px;}
-    .industry-item:last-child:nth-child(odd){grid-column:1/-1;}
     .industry-dot{width:6px;height:6px;border-radius:50%;background:var(--green-bright);flex-shrink:0;}
     .industry-name{font-size:14px;color:var(--grey-light);}
     #section-break{position:relative;width:100%;min-height:360px;overflow:hidden;background:linear-gradient(135deg, #0a0a0a 0%, #12241a 45%, #0a0a0a 100%);display:flex;align-items:center;justify-content:center;border-top:1px solid rgba(76,175,101,0.1);border-bottom:1px solid rgba(76,175,101,0.1);padding:96px 24px;}
@@ -175,6 +175,7 @@
 </head>
 <body>
 
+<style>@media (max-width:1280px){.nav-cta{padding:10px 14px!important;letter-spacing:1.5px!important;font-size:11px!important}.nav-links{gap:16px!important}}</style>
 <nav>
   <a href="/" class="nav-logo-text" style="text-decoration:none;cursor:pointer;"><span>REV</span> IMPROVEMENT CONSULTING</a>
   <ul class="nav-links" id="nav-menu">
@@ -187,7 +188,7 @@
     <li><a href="/partners.html" aria-label="REV Partner Network and Ecosystem">Partners</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:301;">
-    <a href="/#contact" class="nav-cta" aria-label="Secure a business consultation with REV Consulting">Secure a Consultation</a>
+    <a href="/#contact" class="nav-cta" aria-label="Book a 20-minute alignment call with REV Consulting">Book a 20-Min Alignment Call</a>
     <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
       <span></span><span></span><span></span>
     </button>
@@ -210,7 +211,7 @@
   <div class="strip-stat"><span class="strip-number">MBA</span><div class="strip-label">Regent Business School</div></div>
   <div class="strip-stat"><span class="strip-number">BPhil</span><div class="strip-label">IMM Marketing Management</div></div>
   <div class="strip-stat"><span class="strip-number">13+</span><div class="strip-label">Executive Years</div></div>
-  <div class="strip-stat"><span class="strip-number">3</span><div class="strip-label">Core Sectors</div></div>
+  <div class="strip-stat"><span class="strip-number">4</span><div class="strip-label">Core Sectors</div></div>
 </div>
 
 <!-- ABOUT CONTENT -->
@@ -235,6 +236,7 @@
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Telecommunications</span></div>
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">MVNO Builds</span></div>
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Insurance Brokerage</span></div>
+      <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Mining &amp; Industrial Operations (Sustainability / Waste Diversion)</span></div>
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Marketing &amp; Branding</span></div>
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Group Management</span></div>
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Leadership &amp; Change Management</span></div>
@@ -242,6 +244,51 @@
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Professional Services</span></div>
       <div class="industry-item"><div class="industry-dot"></div><span class="industry-name">Human Resources Placement</span></div>
     </div>
+  </div>
+</section>
+
+<style>
+  .rev-band{position:relative;z-index:1;background:#1E293B;border-top:1px solid rgba(248,250,252,.08);border-bottom:1px solid rgba(248,250,252,.08);color:#F8FAFC}
+  .rev-band--alt{background:#243247}
+  .rev-wrap{max-width:1200px;margin:0 auto;padding:72px 48px}
+  .rev-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#4caf65;margin:0 0 14px}
+  .rev-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4.5vw,56px);line-height:1;letter-spacing:1.5px;margin:0 0 16px;color:#F8FAFC}
+  .rev-lead{font-size:16px;line-height:1.75;color:#CBD5E1;max-width:720px;margin:0 0 40px}
+  .rev-grid{display:grid;gap:20px}
+  .rev-grid--3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .rev-grid--4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .rev-card{display:flex;flex-direction:column;background:#273449;border:1px solid rgba(248,250,252,.1);border-radius:12px;padding:28px 26px;transition:transform .2s,border-color .2s;scroll-margin-top:100px}
+  .rev-card:hover{transform:translateY(-3px);border-color:rgba(76,175,101,.55)}
+  .rev-card h3{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;letter-spacing:.5px;line-height:1.15;margin:0 0 12px;color:#F8FAFC}
+  .rev-purpose{font-size:14px;line-height:1.7;color:#CBD5E1;margin:0 0 20px}
+  .rev-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#94A3B8;margin:0 0 10px}
+  .rev-list{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:8px;flex:1}
+  .rev-list li{position:relative;padding-left:20px;font-size:14px;line-height:1.55;color:#F1F5F9}
+  .rev-list li::before{content:'\2192';position:absolute;left:0;color:#4caf65}
+  .rev-price{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;border-top:1px solid rgba(248,250,252,.1);padding-top:16px;margin:0 0 18px;font-size:13px;color:#CBD5E1}
+  .rev-price strong{color:#F8FAFC;font-weight:600}
+  .rev-price span{color:#8fd4a0;font-weight:600}
+  .rev-btn{display:inline-flex;justify-content:center;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;background:#4caf65;color:#0f172a;padding:14px 22px;border-radius:999px;transition:background .2s,transform .2s;text-align:center}
+  .rev-btn:hover{background:#8fd4a0;transform:translateY(-1px)}
+  .rev-link{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4caf65;text-decoration:none;margin-top:auto}
+  .rev-link:hover{color:#8fd4a0}
+  .rev-num{font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:1;color:rgba(76,175,101,.55);margin-bottom:8px}
+  .rev-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;align-items:center}
+  @media (max-width:768px){.rev-wrap{padding:48px 20px}.rev-actions .rev-btn{width:100%}}
+</style>
+<!-- FOUR STRATEGIC PILLARS -->
+<section id="pillars-overview" class="rev-band rev-band--alt" aria-labelledby="pillars-h">
+  <div class="rev-wrap">
+    <p class="rev-eyebrow">Core Expertise</p>
+    <h2 id="pillars-h" class="rev-h2">Four strategic pillars</h2>
+    <p class="rev-lead">REV's work is organised around four pillars, from AI-driven operations to industrial sustainability and carbon finance governance.</p>
+    <div class="rev-grid rev-grid--4">
+      <article class="rev-card"><div class="rev-num">01</div><h3>AI Strategy &amp; Operational Automation</h3><p class="rev-purpose">Practical AI roadmaps and embedded automation that fit how South African businesses actually operate.</p><a class="rev-link" href="/services.html#tab-ai">Explore this pillar →</a></article>
+      <article class="rev-card"><div class="rev-num">02</div><h3>Executive Governance &amp; RevOps</h3><p class="rev-purpose">C-suite advisory, governance and revenue operations that keep strategy, systems and accountability aligned.</p><a class="rev-link" href="/services.html#tab-vision">Explore this pillar →</a></article>
+      <article class="rev-card"><div class="rev-num">03</div><h3>Industrial Sustainability &amp; ESG Strategy</h3><p class="rev-purpose">Waste diversion, circular commodity recovery and carbon finance governance for mining and industrial operations.</p><a class="rev-link" href="/services.html#industrial-sustainability">Explore this pillar →</a></article>
+      <article class="rev-card"><div class="rev-num">04</div><h3>Strategic Growth &amp; Market Expansion</h3><p class="rev-purpose">Commercial growth, partnerships and multi-region expansion built on documented, repeatable operations.</p><a class="rev-link" href="/services.html#tab-revenue">Explore this pillar →</a></article>
+    </div>
+    <div class="rev-actions"><a class="rev-btn" href="/#contact">Book a 20-Min Alignment Call</a></div>
   </div>
 </section>
 
@@ -259,7 +306,7 @@
     <div class="cta-title">READY TO WORK<br>WITH REV?</div>
     <p class="cta-sub">Every engagement starts with a single conversation. Let's start yours.</p>
   </div>
-  <a class="btn-primary" href="/#contact">Secure a Strategic Consultation →</a>
+  <a class="btn-primary" href="/#contact">Request a Fixed-Scope Proposal →</a>
 </section>
 
 <!-- FOOTER -->
@@ -271,6 +318,7 @@
     <meta itemprop="image" content="https://www.revyourbusiness.co.za/og-image.webp">
     <meta itemprop="url" content="https://www.revyourbusiness.co.za/">
     <div class="footer-tagline">Strategic growth for South African enterprises. Boardroom-tested leadership. Measurable results.</div>
+    <a href="https://www.linkedin.com/in/ryan-van-es-47b1585b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:rgba(10,102,194,0.15);border:1px solid rgba(10,102,194,0.35);color:#6aabee;padding:8px 16px;border-radius:2px;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">LinkedIn</a>
   </div>
   <div>
     <div class="footer-col-title">Navigation</div>
@@ -291,6 +339,7 @@
       <li><a href="/services.html#tab-efficiency">Efficiency & Operations</a></li>
       <li><a href="/services.html#tab-vision">Vision & Leadership</a></li>
       <li><a href="/services.html#tab-ai">AI-Augmented Strategy</a></li>
+      <li><a href="/services.html#industrial-sustainability">Industrial Sustainability</a></li>
       <li><a href="/ai-pulse.html">Free AI Pulse Check</a></li>
       <li><a href="/find-your-rev.html">Find Your REV</a></li>
     </ul>

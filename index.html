@@ -18,14 +18,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.revyourbusiness.co.za/">
   <meta property="og:title" content="AI Strategy &amp; Business Consulting Johannesburg | REV">
-  <meta property="og:description" content="Bridging the gap between legacy operations and AI-augmented growth. 13+ years of leadership in Telecoms, Financial Services, and Corporate Turnarounds.">
+  <meta property="og:description" content="Bridging the gap between legacy operations and AI-augmented growth. 13+ years of leadership in Telecoms and Corporate Turnarounds.">
   <meta property="og:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
   <meta property="og:site_name" content="REV Improvement Consulting">
   <meta property="og:locale" content="en_ZA">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.revyourbusiness.co.za/">
   <meta name="twitter:title" content="AI Strategy &amp; Business Consulting Johannesburg | REV">
-  <meta name="twitter:description" content="Bridging the gap between legacy operations and AI-augmented growth. 13+ years of leadership in Telecoms, Financial Services, and Corporate Turnarounds.">
+  <meta name="twitter:description" content="Bridging the gap between legacy operations and AI-augmented growth. 13+ years of leadership in Telecoms and Corporate Turnarounds.">
   <meta name="twitter:image" content="https://www.revyourbusiness.co.za/linkedin-header.png">
 
   <!-- GA4 -->
@@ -206,6 +206,9 @@
   .pillar-tagline { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--green-light); margin-bottom: 16px; }
   .pillar-desc { font-size: 14px; font-weight: 300; line-height: 1.7; color: rgba(245,245,240,0.7); }
 
+  .footer-social { display:flex; gap:16px; margin-top:12px; }
+  .footer-social a { display:flex; align-items:center; gap:6px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--grey-mid); text-decoration:none; transition:color 0.3s; }
+  .footer-social a:hover { color:var(--green-bright); }
 
   /* ── SKIP LINK ── */
   .skip-link { position:absolute; top:-40px; left:0; background:var(--green-bright); color:var(--black); padding:8px 16px; font-weight:700; text-decoration:none; z-index:999; transition:top 0.2s; font-family:'Barlow Condensed',sans-serif; font-size:12px; letter-spacing:2px; text-transform:uppercase; }
@@ -239,7 +242,7 @@
 
   /* STATS */
   #stats { background: var(--off-black); padding: 80px 80px; }
-  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
   .stat-item { padding: 32px 20px; border-right: 1px solid rgba(255,255,255,0.06); text-align: center; }
   .stat-item:last-child { border-right: none; }
   .stat-icon { width: 22px; height: 22px; color: rgba(76,175,101,0.4); margin: 0 auto 10px; display: block; }
@@ -496,6 +499,12 @@
   .page-intro { font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--grey-light); max-width: 620px; }
   .page-intro strong { color: var(--white); font-weight: 500; }
 
+  .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--green-dark); }
+  .strip-stat { padding: 22px 40px; border-right: 1px solid rgba(255,255,255,0.08); text-align: center; }
+  .stats-strip--secondary .strip-stat { padding: 36px 40px; }
+  .strip-stat:last-child { border-right: none; }
+  .strip-number { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--white); line-height: 1; display: block; }
+  .strip-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green-light); margin-top: 4px; }
 
   #cases { padding: 100px 80px; background: var(--off-black); }
   .case-block { display: grid; grid-template-columns: 340px 1fr; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 2px; transition: border-color 0.4s; position: relative; overflow: hidden; }
@@ -569,6 +578,11 @@
     .hero-cred-panel { max-width: 300px; }
     .pillar { padding: 50px 32px; }
     #stats { padding: 80px 40px; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); }
+    .stat-item:nth-child(3) { border-right: none; }
+    .stat-item:nth-child(4),
+    .stat-item:nth-child(5),
+    .stat-item:nth-child(6) { border-top: 1px solid rgba(255,255,255,0.06); }
     .stat-number { font-size: 44px; }
     .stats-strip-2 { grid-template-columns: repeat(5, 1fr); }
     .strip2-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.06); }
@@ -611,9 +625,14 @@
     .pillar-letter { font-size: 80px; }
 
     #stats { padding: 40px 0; }
-    .stats-grid { grid-template-columns: 1fr; }
-    .stat-item { padding: 28px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .stat-item:last-child { border-bottom: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { padding: 28px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat-item:nth-child(even) { border-right: none; }
+    .stat-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat-item:nth-child(4),
+    .stat-item:nth-child(5),
+    .stat-item:nth-child(6) { border-top: none; }
     .stat-number { font-size: 38px; }
     .stat-label { font-size: 10px; }
     .stat-desc { font-size: 11px; }
@@ -658,6 +677,10 @@
     .form-whatsapp-alt { flex-direction: column; gap: 6px; text-align: center; }
 
     #page-hero { padding: 100px 20px 50px; }
+    .stats-strip { grid-template-columns: repeat(2, 1fr); }
+    .strip-stat { padding: 24px 16px; }
+    .stats-strip--secondary .strip-stat { padding: 36px 16px; }
+    .strip-number { font-size: 34px; }
     #cases { padding: 40px 20px; }
     .case-block { grid-template-columns: 1fr; }
     .case-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 32px 20px; }
@@ -687,6 +710,11 @@
     .btn-primary, .btn-secondary { font-size: 13px; padding: 14px 20px; }
     .case-value { font-size: 44px; }
     .engagement-cta-title { font-size: 22px; }
+    .stats-strip { grid-template-columns: 1fr 1fr; }
+    .strip-stat { padding: 20px 12px; }
+    .stats-strip--secondary .strip-stat { padding: 30px 12px; }
+    .strip-number { font-size: 28px; }
+    .strip-label { font-size: 9px; letter-spacing: 1px; }
     footer { padding: 32px 16px; }
     #contact { padding: 30px 16px; }
     #services { padding: 50px 16px 32px; }
@@ -704,6 +732,8 @@
     .stat-number { font-size: 26px; }
     .strip2-number { font-size: 14px; }
     .form-container { padding: 16px; }
+    .stats-strip { grid-template-columns: 1fr; }
+    .strip-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .case-value { font-size: 38px; }
     #contact { padding: 24px 12px; }
   }
@@ -854,6 +884,8 @@
     }
 
     /* ── STATS STRIP ── */
+    .stats-strip { grid-template-columns: 1fr 1fr !important; }
+    .stats-strip--secondary .strip-stat { padding: 24px 12px !important; }
 
     /* ── STATS STRIP 2 (TRUST METRICS) ── */
     .stats-strip-2 {
@@ -868,6 +900,7 @@
 
   @media (max-width: 480px) {
     .hero-title { font-size: clamp(38px, 11vw, 52px) !important; }
+    .stats-strip { grid-template-columns: 1fr !important; }
     .stats-strip-2 { grid-template-columns: 1fr !important; }
     .strip2-item { padding: 16px 10px !important; }
     #pillars { grid-template-columns: 1fr !important; }
@@ -1170,7 +1203,8 @@
       },
       "sameAs": [
         "https://www.linkedin.com/company/rev-improvement-consulting"
-      ]
+      ],
+      "knowsAbout": ["AI Strategy & Operational Automation", "Executive Governance & RevOps", "Industrial Sustainability & ESG Strategy", "Carbon Finance Governance", "Strategic Growth & Market Expansion"]
     }
   ]
 }
@@ -1179,6 +1213,7 @@
 <body>
 
 <!-- ── NAVIGATION ── -->
+<style>@media (max-width:1280px){.nav-cta{padding:10px 14px!important;letter-spacing:1.5px!important;font-size:11px!important}.nav-links{gap:16px!important}}</style>
 <nav role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo-text" onclick="showView('main'); return false;" style="text-decoration:none;cursor:pointer;"><span>REV</span> IMPROVEMENT CONSULTING</a>
   <ul class="nav-links" id="nav-menu">
@@ -1192,7 +1227,7 @@
     <li><a href="/partners.html" aria-label="REV Partner Network and Ecosystem" onclick="closeMenu()">Partners</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:301;">
-    <span class="nav-cta" onclick="showView('main'); navTo('contact'); closeMenu()" aria-label="Secure a business consultation with REV Consulting">Secure a Consultation</span>
+    <span class="nav-cta" onclick="showView('main'); navTo('contact'); closeMenu()" aria-label="Book a 20-minute alignment call with REV Consulting">Book a 20-Min Alignment Call</span>
     <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
       <span></span><span></span><span></span>
     </button>
@@ -1215,7 +1250,7 @@
     <div class="hero-left">
       <div class="hero-eyebrow">Strategic Business Consulting · South Africa</div>
       <h2 class="hero-h1">STRATEGIC <span class="accent">GROWTH.</span><br>OPERATIONAL <span class="accent">EXCELLENCE.</span><br>FUTURE-PROOF <span class="accent">VISION.</span><br>REV IT UP.</h2>
-      <p class="hero-subtext">13+ years of C-suite leadership across telecoms and corporate sectors. <strong>Real strategy. Real results.</strong> South African businesses — built to last, designed to grow. Backed by a growing network of specialist partners across telecoms and technology.</p>
+      <p class="hero-subtext">13+ years of C-suite leadership across telecoms and corporate sectors. <strong>Real strategy. Real results.</strong> South African businesses — built to last, designed to grow. Backed by a growing network of specialist partners across telecoms, technology and industrial sustainability.</p>
       <div class="hero-ai-blurb">
         <span class="hero-ai-tag">AI-AUGMENTED STRATEGY</span>
         <p class="hero-ai-text">Most businesses know AI is coming. Few know how to use it. <strong>REV bridges that gap</strong> — embedding practical AI tools into your operations, strategy, and decision-making before your competitors do.</p>
@@ -1225,11 +1260,12 @@
     <div class="hero-right">
       <div class="hero-cred-panel">
         <div class="hero-cred-eyebrow">Trusted Across</div>
-        <div class="hero-cred-stat">3</div>
+        <div class="hero-cred-stat">4</div>
         <div class="hero-cred-statlabel">Core Sectors</div>
         <ul class="hero-cred-list">
           <li>Telecommunications</li>
           <li>Financial Services</li>
+          <li>Mining &amp; Industrial Operations (Sustainability / Waste Diversion)</li>
           <li>Corporate Group Management</li>
         </ul>
         <div class="hero-cred-divider"></div>
@@ -1251,16 +1287,28 @@
         <div class="stat-desc">C-suite &amp; shareholder-level leadership</div>
       </div>
       <div class="stat-item">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        <span class="stat-number">120+</span>
-        <div class="stat-label">Projects Completed</div>
-        <div class="stat-desc">End-to-end mandates delivered across sectors</div>
-      </div>
-      <div class="stat-item">
         <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <span class="stat-number">500%</span>
         <div class="stat-label">Branch Growth</div>
         <div class="stat-desc">1 to 5 branches within 12 months</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="stat-number">18</span>
+        <div class="stat-label">Month Turnaround</div>
+        <div class="stat-desc">Underperforming region to profitable growth</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span class="stat-number">70+</span>
+        <div class="stat-label">Personnel Scope</div>
+        <div class="stat-desc">Group stabilization &amp; leadership</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <span class="stat-number">120+</span>
+        <div class="stat-label">Projects Completed</div>
+        <div class="stat-desc">End-to-end mandates delivered across sectors</div>
       </div>
     </div>
   </section>
@@ -1339,56 +1387,31 @@
     <div style="max-width:960px;">
       <div class="section-tag fade-up">What We Do</div>
       <h2 class="section-title fade-up" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:2px;margin-bottom:20px;">THE <span class="accent">REV</span><br>SERVICE MENU.</h2>
-      <p class="fade-up" style="font-size:15px;color:var(--muted);max-width:540px;line-height:1.75;margin-bottom:44px;">Four capability streams — Revenue &amp; Growth, Operational Efficiency, Vision &amp; Leadership, and AI-Augmented Strategy. Each designed to move the needle on your most pressing challenge.</p>
+      <p class="fade-up" style="font-size:15px;color:var(--muted);max-width:540px;line-height:1.75;margin-bottom:44px;">Four strategic pillars, each designed to move the needle on your most pressing challenge: AI strategy and operational automation, executive governance and RevOps, industrial sustainability and ESG, and strategic growth and market expansion.</p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:44px;">
-
-        <a href="/services.html#tab-revenue" class="svc-tile fade-up" style="
-          background:var(--card);
-          border:1px solid rgba(76,175,101,0.25);
-          border-radius:3px;padding:24px 22px;
-          text-decoration:none;display:block;color:inherit;
-          transition:all .25s ease;position:relative;overflow:hidden;
-        " onmouseover="this.style.borderColor='var(--green)';this.style.background='rgba(76,175,101,0.07)';this.style.boxShadow='0 0 20px rgba(76,175,101,0.15),inset 0 0 30px rgba(76,175,101,0.04)';this.querySelector('.svc-num').style.color='var(--green)'"
-           onmouseout="this.style.borderColor='rgba(76,175,101,0.25)';this.style.background='var(--card)';this.style.boxShadow='none';this.querySelector('.svc-num').style.color='rgba(76,175,101,0.5)'">
-          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;transition:color .25s;">01</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;text-transform:uppercase;color:var(--white);letter-spacing:1px;">Revenue &amp; Growth</div>
+        <a href="/services.html#tab-ai" class="svc-tile fade-up" style="background:#1E293B;border:1px solid rgba(248,250,252,0.12);border-radius:8px;padding:24px 22px;text-decoration:none;display:block;color:inherit;transition:all .25s ease;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='#4caf65';this.style.background='#243247'" onmouseout="this.style.borderColor='rgba(248,250,252,0.12)';this.style.background='#1E293B'">
+          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;">01</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;color:#F8FAFC;letter-spacing:1px;margin-bottom:8px;">AI Strategy &amp; Operational Automation</div>
+          <div style="font-size:13px;line-height:1.6;color:#CBD5E1;">Practical AI roadmaps and embedded automation that fit how South African businesses actually operate.</div>
         </a>
 
-        <a href="/services.html#tab-efficiency" class="svc-tile fade-up" style="
-          background:var(--card);
-          border:1px solid rgba(76,175,101,0.25);
-          border-radius:3px;padding:24px 22px;
-          text-decoration:none;display:block;color:inherit;
-          transition:all .25s ease;position:relative;overflow:hidden;
-        " onmouseover="this.style.borderColor='var(--green)';this.style.background='rgba(76,175,101,0.07)';this.style.boxShadow='0 0 20px rgba(76,175,101,0.15),inset 0 0 30px rgba(76,175,101,0.04)';this.querySelector('.svc-num').style.color='var(--green)'"
-           onmouseout="this.style.borderColor='rgba(76,175,101,0.25)';this.style.background='var(--card)';this.style.boxShadow='none';this.querySelector('.svc-num').style.color='rgba(76,175,101,0.5)'">
-          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;transition:color .25s;">02</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;text-transform:uppercase;color:var(--white);letter-spacing:1px;">Efficiency &amp; Operations</div>
+        <a href="/services.html#tab-vision" class="svc-tile fade-up" style="background:#1E293B;border:1px solid rgba(248,250,252,0.12);border-radius:8px;padding:24px 22px;text-decoration:none;display:block;color:inherit;transition:all .25s ease;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='#4caf65';this.style.background='#243247'" onmouseout="this.style.borderColor='rgba(248,250,252,0.12)';this.style.background='#1E293B'">
+          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;">02</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;color:#F8FAFC;letter-spacing:1px;margin-bottom:8px;">Executive Governance &amp; RevOps</div>
+          <div style="font-size:13px;line-height:1.6;color:#CBD5E1;">C-suite advisory, governance and revenue operations that keep strategy, systems and accountability aligned.</div>
         </a>
 
-        <a href="/services.html#tab-vision" class="svc-tile fade-up" style="
-          background:var(--card);
-          border:1px solid rgba(76,175,101,0.25);
-          border-radius:3px;padding:24px 22px;
-          text-decoration:none;display:block;color:inherit;
-          transition:all .25s ease;position:relative;overflow:hidden;
-        " onmouseover="this.style.borderColor='var(--green)';this.style.background='rgba(76,175,101,0.07)';this.style.boxShadow='0 0 20px rgba(76,175,101,0.15),inset 0 0 30px rgba(76,175,101,0.04)';this.querySelector('.svc-num').style.color='var(--green)'"
-           onmouseout="this.style.borderColor='rgba(76,175,101,0.25)';this.style.background='var(--card)';this.style.boxShadow='none';this.querySelector('.svc-num').style.color='rgba(76,175,101,0.5)'">
-          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;transition:color .25s;">03</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;text-transform:uppercase;color:var(--white);letter-spacing:1px;">Vision &amp; Leadership</div>
+        <a href="/services.html#industrial-sustainability" class="svc-tile fade-up" style="background:#1E293B;border:1px solid rgba(248,250,252,0.12);border-radius:8px;padding:24px 22px;text-decoration:none;display:block;color:inherit;transition:all .25s ease;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='#4caf65';this.style.background='#243247'" onmouseout="this.style.borderColor='rgba(248,250,252,0.12)';this.style.background='#1E293B'">
+          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;">03</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;color:#F8FAFC;letter-spacing:1px;margin-bottom:8px;">Industrial Sustainability &amp; ESG Strategy</div>
+          <div style="font-size:13px;line-height:1.6;color:#CBD5E1;">Waste diversion, circular commodity recovery and carbon finance governance for mining and industrial operations.</div>
         </a>
 
-        <a href="/services.html#tab-ai" class="svc-tile fade-up" style="
-          background:var(--card);
-          border:1px solid rgba(76,175,101,0.25);
-          border-radius:3px;padding:24px 22px;
-          text-decoration:none;display:block;color:inherit;
-          transition:all .25s ease;position:relative;overflow:hidden;
-        " onmouseover="this.style.borderColor='var(--green)';this.style.background='rgba(76,175,101,0.07)';this.style.boxShadow='0 0 20px rgba(76,175,101,0.15),inset 0 0 30px rgba(76,175,101,0.04)';this.querySelector('.svc-num').style.color='var(--green)'"
-           onmouseout="this.style.borderColor='rgba(76,175,101,0.25)';this.style.background='var(--card)';this.style.boxShadow='none';this.querySelector('.svc-num').style.color='rgba(76,175,101,0.5)'">
-          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;transition:color .25s;">04</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;text-transform:uppercase;color:var(--white);letter-spacing:1px;">AI-Augmented Strategy</div>
+        <a href="/services.html#tab-revenue" class="svc-tile fade-up" style="background:#1E293B;border:1px solid rgba(248,250,252,0.12);border-radius:8px;padding:24px 22px;text-decoration:none;display:block;color:inherit;transition:all .25s ease;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='#4caf65';this.style.background='#243247'" onmouseout="this.style.borderColor='rgba(248,250,252,0.12)';this.style.background='#1E293B'">
+          <div class="svc-num" style="font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:rgba(76,175,101,0.5);margin-bottom:10px;">04</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;color:#F8FAFC;letter-spacing:1px;margin-bottom:8px;">Strategic Growth &amp; Market Expansion</div>
+          <div style="font-size:13px;line-height:1.6;color:#CBD5E1;">Commercial growth, partnerships and multi-region expansion built on documented, repeatable operations.</div>
         </a>
 
       </div>
@@ -1428,9 +1451,9 @@
     </div>
     <div class="strip2-item">
       <svg class="strip2-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="9" height="9"/><rect x="13" y="2" width="9" height="9"/><rect x="2" y="13" width="9" height="9"/><rect x="13" y="13" width="9" height="9"/></svg>
-      <span class="strip2-number">3</span>
+      <span class="strip2-number">4</span>
       <div class="strip2-label">Core Sectors</div>
-      <div class="strip2-desc">Telecoms, Financial Services &amp; Corporate</div>
+      <div class="strip2-desc">Telecoms, Financial Services, Mining &amp; Industrial, Corporate</div>
     </div>
     <div class="strip2-item">
       <svg class="strip2-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -1480,6 +1503,8 @@
               <span class="testimonial-tag">Vision &amp; Leadership</span>
             </div>
           </div>
+
+          
 
           <div class="testimonial-card">
             <div class="testimonial-quote-mark">"</div>
@@ -1567,10 +1592,10 @@
         <svg class="engagement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         <div class="engagement-title">Project-Based Strategic Build</div>
         <div class="engagement-subtitle">Defined Scope · Defined Outcomes</div>
-        <p class="engagement-desc">Contracted for a specific strategic mandate with clear deliverables — from MVNO builds and digital transformation to turnaround strategies and market expansion blueprints.</p>
+        <p class="engagement-desc">Contracted for a specific strategic mandate with clear deliverables — from MVNO builds and commercial structuring to turnaround strategies and market expansion blueprints.</p>
         <ul class="engagement-features">
           <li>MVNO / Telco infrastructure builds</li>
-          <li>AI &amp; digital transformation programmes</li>
+          <li>Commercial structuring &amp; negotiation</li>
           <li>Regional expansion strategies</li>
           <li>M&amp;A identification and execution</li>
         </ul>
@@ -1637,7 +1662,7 @@
 
         <div class="form-group"><label class="form-label">Message *</label><textarea id="f-objective" class="form-textarea" style="min-height:100px;" placeholder="Briefly describe what you'd like REV to help you achieve..."></textarea></div>
 
-        <button class="form-submit" onclick="handleSubmit(this)">SECURE A STRATEGIC CONSULTATION →</button>
+        <button class="form-submit" onclick="handleSubmit(this)">REQUEST A FIXED-SCOPE PROPOSAL →</button>
 
         <div class="form-whatsapp-alt">
           <span>Prefer to chat directly?</span>
@@ -1659,6 +1684,24 @@
       <meta itemprop="image" content="https://www.revyourbusiness.co.za/og-image.webp">
       <meta itemprop="url" content="https://www.revyourbusiness.co.za/">
       <div class="footer-tagline">Strategic growth for South African enterprises. Boardroom-tested leadership. Measurable results.</div>
+      <a href="https://www.linkedin.com/in/ryan-van-es-47b1585b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" style="
+        display: inline-flex; align-items: center; gap: 8px;
+        margin-top: 16px;
+        background: rgba(10,102,194,0.15);
+        border: 1px solid rgba(10,102,194,0.35);
+        color: #6aabee;
+        padding: 8px 16px; border-radius: 2px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+        text-decoration: none;
+        transition: all .2s;
+      " onmouseover="this.style.background='rgba(10,102,194,0.28)';this.style.borderColor='rgba(10,102,194,0.6)'"
+         onmouseout="this.style.background='rgba(10,102,194,0.15)';this.style.borderColor='rgba(10,102,194,0.35)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#6aabee" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>
@@ -1679,6 +1722,7 @@
         <li><a href="/services.html#tab-efficiency">Efficiency & Operations</a></li>
         <li><a href="/services.html#tab-vision">Vision & Leadership</a></li>
         <li><a href="/services.html#tab-ai">AI-Augmented Strategy</a></li>
+      <li><a href="/services.html#industrial-sustainability">Industrial Sustainability</a></li>
         <li><a href="/ai-pulse.html">Free AI Pulse Check</a></li>
         <li><a href="/find-your-rev.html">Find Your REV</a></li>
       </ul>
@@ -1702,7 +1746,7 @@
 
   <!-- MOBILE STICKY CTA -->
   <div class="mobile-cta-bar">
-    <span class="btn-primary" onclick="showView('main'); navTo('contact')">SECURE A CONSULTATION →</span>
+    <span class="btn-primary" onclick="showView('main'); navTo('contact')">BOOK A 20-MIN ALIGNMENT CALL →</span>
   </div>
 </div><!-- end view-main -->
 
